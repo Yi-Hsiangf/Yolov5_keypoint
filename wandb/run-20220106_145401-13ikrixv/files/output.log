@@ -1,0 +1,550 @@
+
+Shape of passed values is (3051, 6), indices imply (3051, 4)
+Overriding model.yaml nc=80 with nc=1
+                 from  n    params  module                                  arguments
+  0                -1  1      3520  models.common.Conv                      [3, 32, 6, 2, 2]
+  1                -1  1     18560  models.common.Conv                      [32, 64, 3, 2]
+  2                -1  1     18816  models.common.C3                        [64, 64, 1]
+  3                -1  1     73984  models.common.Conv                      [64, 128, 3, 2]
+  4                -1  2    115712  models.common.C3                        [128, 128, 2]
+  5                -1  1    295424  models.common.Conv                      [128, 256, 3, 2]
+  6                -1  3    625152  models.common.C3                        [256, 256, 3]
+  7                -1  1   1180672  models.common.Conv                      [256, 512, 3, 2]
+  8                -1  1   1182720  models.common.C3                        [512, 512, 1]
+  9                -1  1    656896  models.common.SPPF                      [512, 512, 5]
+ 10                -1  1    131584  models.common.Conv                      [512, 256, 1, 1]
+ 11                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+ 12           [-1, 6]  1         0  models.common.Concat                    [1]
+ 13                -1  1    361984  models.common.C3                        [512, 256, 1, False]
+ 14                -1  1     33024  models.common.Conv                      [256, 128, 1, 1]
+ 15                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+ 16           [-1, 4]  1         0  models.common.Concat                    [1]
+ 17                -1  1     90880  models.common.C3                        [256, 128, 1, False]
+ 18                -1  1    147712  models.common.Conv                      [128, 128, 3, 2]
+ 19          [-1, 14]  1         0  models.common.Concat                    [1]
+ 20                -1  1    296448  models.common.C3                        [256, 256, 1, False]
+ 21                -1  1    590336  models.common.Conv                      [256, 256, 3, 2]
+ 22          [-1, 10]  1         0  models.common.Concat                    [1]
+ 23                -1  1   1182720  models.common.C3                        [512, 512, 1, False]
+ 24      [17, 20, 23]  1     21576  models.yolo.Detect                      [1, [[10, 13, 16, 30, 33, 23], [30, 61, 62, 45, 59, 119], [116, 90, 156, 198, 373, 326]], [128, 256, 512]]
+Model Summary: 270 layers, 7027720 parameters, 7027720 gradients, 15.9 GFLOPs
+Transferred 343/349 items from yolov5s.pt
+Scaled weight_decay = 0.0005
+[34m[1moptimizer:[39m[22m SGD with parameter groups 57 weight, 60 weight (no decay), 60 bias
+[34m[1mtrain: [39m[22mScanning '/home/data/data/2020_Autumn_key/labels/train.cache' images and labels... 1078 found, 0 missing, 239 empty, 2 corrupted: 100% 1078/1078 [00:00<?, ?it/s]
+[34m[1mtrain: [39m[22mWARNING: /home/data/data/2020_Autumn_key/images/train/VID_20201101_102143.mp4#t=144.2.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.1329      1.1329]
+[34m[1mtrain: [39m[22mWARNING: /home/data/data/2020_Autumn_key/images/train/VID_20201101_102625.mp4#t=139.5.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0273      1.0273]
+[34m[1mval: [39m[22mScanning '/home/data/data/2020_Autumn_key/labels/val.cache' images and labels... 236 found, 0 missing, 66 empty, 0 corrupted: 100% 236/236 [00:00<?, ?it/s]
+Plotting labels to runs/train/exp36/labels.jpg...
+[34m[1mAutoAnchor: [39m[22m5.72 anchors/target, 0.986 Best Possible Recall (BPR). Current anchors are a good fit to dataset ✅
+Image sizes 640 train, 640 val
+Using 8 dataloader workers
+Logging results to [1mruns/train/exp36
+Starting training for 150 epochs...
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+
+
+
+     0/149     7.38G    0.1183   0.03502     7.238       403      1280:  21% 7/34 [00:14<00:27,  1.00s/it]
+p_key_xy:  tensor([[14.46094, 13.56250],
+        [13.47656, 14.45312]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.79166, 0.54167],
+        [0.50000, 0.72917]], device='cuda:0')
+p_key_xy:  tensor([[13.66406, 11.49219],
+        [12.94531, 10.83594]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.19792, 0.61458],
+        [0.85417, 0.21875]], device='cuda:0')
+p_key_xy:  tensor([[13.19531, 13.39062],
+        [13.35938, 13.09375]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.09896, 0.80729],
+        [0.92708, 0.10938]], device='cuda:0')
+b lkey:  tensor([37.18041], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([7.43608], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[12.64062, 14.58594],
+        [13.17969, 13.66406]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.39583, 0.18750],
+        [0.37500, 0.83334]], device='cuda:0')
+p_key_xy:  tensor([[13.99219, 11.34375],
+        [13.68750, 12.57812]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.44792, 0.80208],
+        [0.81250, 0.40625]], device='cuda:0')
+p_key_xy:  tensor([[13.36719, 14.51562],
+        [13.58594, 13.96875]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.22396, 0.90104],
+        [0.90625, 0.20312]], device='cuda:0')
+b lkey:  tensor([37.24971], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([7.44994], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[12.59375, 13.26562],
+        [13.60938, 15.56250]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.08334, 0.72916],
+        [0.60416, 0.47916]], device='cuda:0')
+p_key_xy:  tensor([[12.50000, 13.17969],
+        [14.56250, 12.62500]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.46875, 0.69792],
+        [0.87500, 0.67709]], device='cuda:0')
+p_key_xy:  tensor([[13.47656, 13.25000],
+        [14.09375, 13.98438]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.73437, 0.34896],
+        [0.93750, 0.33854]], device='cuda:0')
+b lkey:  tensor([37.14348], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([7.42870], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[13.18750, 13.69531],
+        [13.42969, 13.01562]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.54166, 0.43750],
+        [0.79167, 0.45834]], device='cuda:0')
+p_key_xy:  tensor([[13.15625, 12.74219],
+        [11.30469, 12.90625]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.26041, 0.42709],
+        [0.30209, 0.57292]], device='cuda:0')
+p_key_xy:  tensor([[12.90625, 13.24219],
+        [13.78125, 13.51562]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.13021, 0.71354],
+        [0.65104, 0.78646]], device='cuda:0')
+b lkey:  tensor([37.24627], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([7.44925], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[14.35938, 13.84375],
+        [14.97656, 13.12500]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.52084, 0.58334],
+        [0.60417, 0.45834]], device='cuda:0')
+p_key_xy:  tensor([[13.57031, 11.83594],
+        [11.96875, 12.53125]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.69792, 0.38542],
+        [0.41667, 0.87500]], device='cuda:0')
+p_key_xy:  tensor([[13.93750, 12.71094],
+        [13.00781, 13.39062]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.84896, 0.69271],
+        [0.70833, 0.93750]], device='cuda:0')
+b lkey:  tensor([36.31333], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([7.26267], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[13.39844, 13.30469],
+        [12.97656, 13.76562]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.54166, 0.18750],
+        [0.79166, 0.20834]], device='cuda:0')
+p_key_xy:  tensor([[12.90625, 11.62500],
+        [13.29688, 11.56250]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.27083, 0.09375],
+        [0.89583, 0.10417]], device='cuda:0')
+p_key_xy:  tensor([[12.67969, 14.13281],
+        [12.34375, 12.71094]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.89062, 0.91146],
+        [1.10938, 0.47396]], device='cuda:0')
+b lkey:  tensor([34.91025], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([6.98205], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[11.64844, 13.04688],
+        [11.98438, 13.54688]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.35417, 0.35417],
+        [0.70834, 0.22916]], device='cuda:0')
+p_key_xy:  tensor([[13.20312, 11.39844],
+        [11.81250, 11.39062]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.69792, 0.64583],
+        [0.40625, 0.31250]], device='cuda:0')
+p_key_xy:  tensor([[11.89844, 12.53125],
+        [12.40625, 12.26562]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.20833, 0.76042],
+        [0.84896, 0.32292]], device='cuda:0')
+b lkey:  tensor([33.27596], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([6.65519], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[11.28906, 13.97656],
+        [13.01562, 13.78125]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.68750, 0.62500],
+        [0.02084, 0.72916]], device='cuda:0')
+p_key_xy:  tensor([[10.79688, 12.48438],
+        [10.84375, 12.54688]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.72916, 0.07292],
+        [0.28125, 0.29167]], device='cuda:0')
+p_key_xy:  tensor([[11.35938, 11.23438],
+        [11.22656, 10.64844]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.86458, 0.53646],
+        [0.14062, 0.64583]], device='cuda:0')
+b lkey:  tensor([31.39193], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([6.27839], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[13.78125, 13.41406],
+        [13.65625, 13.33594]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.89583, 0.25000],
+        [0.68750, 0.35416]], device='cuda:0')
+p_key_xy:  tensor([[11.75000, 10.98438],
+        [10.82812, 10.67969]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.43750, 0.11458],
+        [0.44792, 0.12500]], device='cuda:0')
+p_key_xy:  tensor([[10.49219, 10.57812],
+        [11.38281, 10.69531]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.60417, 0.28646],
+        [0.71875, 0.05729]], device='cuda:0')
+b lkey:  tensor([29.48566], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([5.89713], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[12.17188, 12.50000],
+        [12.82031, 13.53125]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.14584, 0.02083],
+        [0.18750, 0.47916]], device='cuda:0')
+p_key_xy:  tensor([[ 9.39844, 10.75000],
+        [10.79688, 10.89062]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.50000, 0.56250],
+        [0.53125, 0.21875]], device='cuda:0')
+p_key_xy:  tensor([[9.64062, 9.31250],
+        [9.68750, 9.18750]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.25000, 0.78125],
+        [0.76562, 0.60938]], device='cuda:0')
+b lkey:  tensor([27.05317], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([5.41063], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[11.84375, 12.64062],
+        [13.84375, 14.91406]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[ 0.16666,  0.83334],
+
+
+
+
+     0/149     21.9G    0.1197   0.03074     4.182       386      1280:  68% 23/34 [00:22<00:05,  2.08it/s]
+p_key_xy:  tensor([[11.59375,  8.64844],
+        [10.90625,  9.66406]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.31250, 0.80208],
+        [0.43750, 0.65625]], device='cuda:0')
+p_key_xy:  tensor([[8.73438, 9.67188],
+        [8.89844, 9.37500]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.65625, 0.90104],
+        [0.21875, 0.82812]], device='cuda:0')
+b lkey:  tensor([26.93004], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([5.38601], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[13.04688, 13.25781],
+        [12.60156, 13.00781]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.87500, 0.70833],
+        [0.16666, 0.89584]], device='cuda:0')
+p_key_xy:  tensor([[ 9.28906,  9.69531],
+        [10.51562, 10.42188]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.51042, 0.30209],
+        [0.41667, 0.68750]], device='cuda:0')
+p_key_xy:  tensor([[9.62500, 8.84375],
+        [8.74219, 9.77344]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.70833, 0.34375],
+        [0.26042, 0.15625]], device='cuda:0')
+b lkey:  tensor([24.29716], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([4.85943], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[11.57031, 12.92969],
+        [11.64062, 13.66406]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[8.12500e-01, 4.37500e-01],
+        [3.81470e-06, 8.33321e-02]], device='cuda:0')
+p_key_xy:  tensor([[8.90625, 9.25000],
+        [9.71875, 9.52344]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.38542, 0.02084],
+        [0.45833, 0.06250]], device='cuda:0')
+p_key_xy:  tensor([[7.60156, 7.74609],
+        [7.74219, 7.83203]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.69271, 0.01042],
+        [0.93750, 0.40104]], device='cuda:0')
+b lkey:  tensor([21.20890], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([4.24178], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[10.10938, 13.48438],
+        [13.05469, 12.84375]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[2.18750, 0.50000],
+        [0.58334, 0.04166]], device='cuda:0')
+p_key_xy:  tensor([[7.53906, 7.32031],
+        [8.69531, 8.39062]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.00000, 0.02084],
+        [0.94791, 0.32292]], device='cuda:0')
+p_key_xy:  tensor([[5.67188, 6.48828],
+        [5.07031, 6.47656]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.00000, 0.01042],
+        [0.25000, 0.93750]], device='cuda:0')
+b lkey:  tensor([17.22906], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([3.44581], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[10.10938, 14.26562],
+        [12.18750, 11.45312]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.31250, 0.39583],
+        [0.85416, 0.60417]], device='cuda:0')
+p_key_xy:  tensor([[6.73438, 7.52344],
+        [6.16406, 8.31250]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.75000, 0.95833],
+        [0.85417, 0.93750]], device='cuda:0')
+p_key_xy:  tensor([[3.49219, 4.46484],
+        [4.14844, 4.50391]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.87500, 0.97917],
+        [0.92708, 0.96875]], device='cuda:0')
+b lkey:  tensor([13.97879], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([2.79576], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[12.06250, 13.15625],
+        [11.93750, 13.17188]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[1.93750, 0.56250],
+        [0.52084, 0.79167]], device='cuda:0')
+p_key_xy:  tensor([[8.05469, 7.06250],
+        [4.49609, 4.78516]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.54166, 0.98959],
+        [0.58333, 0.52083]], device='cuda:0')
+p_key_xy:  tensor([[4.74609, 4.48047],
+        [1.38281, 1.91797]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.77083, 0.99479],
+        [0.79166, 0.76042]], device='cuda:0')
+b lkey:  tensor([11.03058], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([2.20612], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[10.88281, 12.12500],
+        [11.40625, 11.96094]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.85417, 0.85417],
+        [0.56250, 0.47916]], device='cuda:0')
+p_key_xy:  tensor([[4.84766, 3.59375],
+        [1.62500, 3.19922]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.18750, 0.46875],
+        [0.26042, 0.25000]], device='cuda:0')
+p_key_xy:  tensor([[-1.50781, -1.39453],
+        [-0.06250,  1.41406]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.75521, 0.48438],
+        [0.09375, 0.23438]], device='cuda:0')
+b lkey:  tensor([7.55257], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([1.51051], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[ 9.47656, 13.57031],
+        [ 9.06250, 13.60938]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.66667, 0.37500],
+        [0.56250, 0.95833]], device='cuda:0')
+p_key_xy:  tensor([[-0.66406,  0.19531],
+        [ 0.40625, -1.47656]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.10417, 0.22917],
+        [1.00000, 0.40625]], device='cuda:0')
+p_key_xy:  tensor([[-0.45703, -1.23438],
+        [-0.90625, -0.92578]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.55208, 0.61458],
+        [0.50000, 0.70312]], device='cuda:0')
+b lkey:  tensor([4.26308], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([0.85262], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[ 9.08594, 11.90625],
+        [ 8.45312, 13.88281]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.64583, 0.91667],
+        [0.81250, 0.64584]], device='cuda:0')
+p_key_xy:  tensor([[ 0.52734,  1.37891],
+        [ 1.08594, -1.25000]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.03125, 0.08334],
+        [0.75000, 0.05208]], device='cuda:0')
+p_key_xy:  tensor([[0.32812, 0.67188],
+        [1.86133, 1.36914]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.01562, 0.04167],
+        [0.77604, 0.59896]], device='cuda:0')
+b lkey:  tensor([3.87484], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([0.77497], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[10.40625, 12.09375],
+        [ 9.34375, 12.58594]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.56250, 0.89583],
+        [0.00000, 0.64583]], device='cuda:0')
+p_key_xy:  tensor([[ 3.18750,  3.17188],
+        [-1.39844, -0.75000]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.78125, 0.94792],
+        [0.89583, 0.11458]], device='cuda:0')
+p_key_xy:  tensor([[-1.04688, -1.73438],
+        [-1.01172, -0.98438]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.94792, 0.55729],
+        [0.29688, 0.12500]], device='cuda:0')
+b lkey:  tensor([3.41630], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([0.68326], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[ 8.40625, 14.10938],
+        [ 9.39062, 11.35938]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.81250, 0.58333],
+        [0.43750, 0.66666]], device='cuda:0')
+p_key_xy:  tensor([[2.53516, 1.45312],
+        [2.16797, 1.18359]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.06250, 0.85416],
+        [0.61459, 0.09375]], device='cuda:0')
+
+
+lkey loss:  ensor([[1.39453, 0.82227],
+        [1.21680, 1.23828]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.03125, 0.92708],
+        [0.80729, 0.54688]], device='cuda:0')
+b lkey:  tensor([2.24016], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([0.44803], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[ 8.28125, 13.13281],
+        [ 9.34375, 12.01562]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.68750, 0.31250],
+        [0.16667, 0.60417]], device='cuda:0')
+p_key_xy:  tensor([[ 0.78125,  0.92188],
+        [-0.60156,  0.35547]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.69791, 0.62500],
+        [0.09375, 0.69792]], device='cuda:0')
+p_key_xy:  tensor([[-0.22656,  0.07422],
+        [-0.13672, -0.03125]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.12500, 0.20833],
+        [0.34896, 0.81250]], device='cuda:0')
+b lkey:  tensor([2.10501], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([0.42100], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[ 9.10156, 12.30469],
+        [ 7.48047, 12.85156]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.50000, 0.41667],
+        [0.02083, 0.04166]], device='cuda:0')
+p_key_xy:  tensor([[ 0.55078, -0.80469],
+        [ 0.51172,  0.73828]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.41666, 0.37500],
+        [0.23958, 0.80209]], device='cuda:0')
+p_key_xy:  tensor([[0.06250, 0.33398],
+        [0.35742, 0.86328]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.20833, 0.18750],
+        [0.11979, 0.90104]], device='cuda:0')
+b lkey:  tensor([1.54041], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([0.30808], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[ 7.98047, 11.48438],
+        [ 8.99219, 11.78906]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.50000, 0.16666],
+        [0.27083, 0.08334]], device='cuda:0')
+p_key_xy:  tensor([[ 0.79297, -0.23828],
+        [ 0.53516,  0.35156]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.92709, 0.09375],
+        [0.70833, 0.31250]], device='cuda:0')
+p_key_xy:  tensor([[0.48828, 0.41016],
+        [0.72656, 0.64844]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.46354, 0.04688],
+        [0.85417, 0.65625]], device='cuda:0')
+b lkey:  tensor([1.60564], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([0.32113], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[ 9.24219, 11.78906],
+        [ 9.39062, 11.04688]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.29167, 0.18750],
+        [0.22916, 0.02084]], device='cuda:0')
+p_key_xy:  tensor([[1.37109, 2.27344],
+        [1.09375, 0.42969]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.64584, 0.25000],
+        [0.61459, 0.93750]], device='cuda:0')
+p_key_xy:  tensor([[0.08984, 0.45898],
+        [0.25977, 0.25586]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.30729, 0.96875],
+        [0.84896, 0.65625]], device='cuda:0')
+b lkey:  tensor([1.40917], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([0.28183], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[ 8.61719, 10.42969],
+        [ 7.61328, 11.44531]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.75000, 0.22916],
+        [0.97916, 0.56250]], device='cuda:0')
+p_key_xy:  tensor([[0.72656, 0.12109],
+        [0.22266, 0.41797]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.52083, 0.58333],
+        [0.46875, 0.86458]], device='cuda:0')
+p_key_xy:  tensor([[0.45312, 0.36328],
+        [0.29688, 0.43164]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.26042, 0.29167],
+        [0.23438, 0.43229]], device='cuda:0')
+b lkey:  tensor([1.33766], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([0.26753], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[ 7.85156, 11.42969],
+        [ 7.37891, 11.21094]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.89583, 0.14583],
+        [0.31250, 0.81250]], device='cuda:0')
+p_key_xy:  tensor([[0.30469, 0.17578],
+        [0.48828, 0.42188]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.35416, 0.27084],
+        [0.42708, 0.54166]], device='cuda:0')
+p_key_xy:  tensor([[0.55273, 0.44531],
+        [0.26172, 0.45117]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.67708, 0.13542],
+        [0.71354, 0.27083]], device='cuda:0')
+b lkey:  tensor([1.17008], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([0.23402], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[ 7.58203, 10.63281],
+        [ 8.38281, 10.68750]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.77083, 0.52083],
+        [0.52084, 0.77083]], device='cuda:0')
+p_key_xy:  tensor([[0.68359, 1.02344],
+        [0.15625, 0.70703]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.35417, 0.70833],
+        [0.57292, 0.60417]], device='cuda:0')
+p_key_xy:  tensor([[0.53711, 1.02148],
+        [0.72266, 0.18750]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.67708, 0.85417],
+        [0.78646, 0.30208]], device='cuda:0')
+b lkey:  tensor([1.08641], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([0.21728], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[ 8.92969, 10.78125],
+        [ 7.72266, 10.78906]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[ 0.52084, -0.45833],
+        [ 0.22916,  0.83333]], device='cuda:0')
+p_key_xy:  tensor([[0.77734, 0.23438],
+        [0.36719, 0.40625]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.22916, 0.34375],
+        [0.58334, 0.56250]], device='cuda:0')
+p_key_xy:  tensor([[0.52148, 0.66797],
+        [0.35742, 0.54492]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.54167, 0.15104],
+        [1.17188, 0.82812]], device='cuda:0')
+b lkey:  tensor([0.85729], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([0.17146], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[ 7.78125, 10.07031],
+        [ 8.28125,  9.48438]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.27083, 0.35416],
+        [0.60417, 0.35416]], device='cuda:0')
+p_key_xy:  tensor([[0.35938, 0.70312],
+        [0.23828, 0.30469]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.26042, 0.60417],
+        [0.96875, 0.39583]], device='cuda:0')
+p_key_xy:  tensor([[0.31055, 0.39453],
+        [0.98828, 0.74414]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.13021, 0.30208],
+        [0.48438, 0.69792]], device='cuda:0')
+b lkey:  tensor([0.91975], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([0.18395], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[ 6.87891, 10.00000],
+        [ 6.87109,  9.80469]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[ 0.41666,  0.20834],
+        [-1.20835,  0.60416]], device='cuda:0')
+p_key_xy:  tensor([[0.61719, 0.88672],
+        [0.21094, 0.18750]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.22917, 0.02083],
+        [0.35417, 0.45834]], device='cuda:0')
+p_key_xy:  tensor([[ 0.27344,  0.23633],
+        [-0.07812,  0.17383]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.81771, 0.49479],
+        [0.11459, 0.01042]], device='cuda:0')
+b lkey:  tensor([0.81705], device='cuda:0', grad_fn=<AddBackward0>)
+     0/149     21.9G    0.1109   0.03127     2.898       143      1280: 100% 34/34 [00:28<00:00,  1.19it/s]
+lkey loss:  tensor([0.16341], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[ 7.27344, 10.21875],
+        [ 6.35547,  9.72656]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.04166, 0.85417],
+        [0.87500, 0.02084]], device='cuda:0')
+p_key_xy:  tensor([[0.82422, 1.13672],
+        [0.82812, 0.91406]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[ 0.26041,  0.57292],
+        [-0.27083,  0.56250]], device='cuda:0')
+p_key_xy:  tensor([[1.20117, 0.30469],
+        [0.79883, 0.91016]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.63021, 0.28646],
+        [0.36458, 0.78125]], device='cuda:0')
+b lkey:  tensor([0.96688], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([0.19338], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[7.46875, 8.87500],
+        [7.88672, 9.27344]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.39583, 0.31250],
+        [3.27084, 0.35417]], device='cuda:0')
+p_key_xy:  tensor([[0.47656, 0.68750],
+        [0.71094, 0.48047]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.83334, 0.89583],
+        [0.51041, 0.48958]], device='cuda:0')
+p_key_xy:  tensor([[ 0.43945,  0.30859],
+        [-0.09570,  0.54102]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.69792, 0.93229],
+        [0.41667, 0.44792]], device='cuda:0')
+b lkey:  tensor([0.73886], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([0.14777], device='cuda:0', grad_fn=<MulBackward0>)
+p_key_xy:  tensor([[6.56641, 8.82812],
+        [6.49219, 9.87500]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.06250, 0.35416],
+        [0.77084, 0.39583]], device='cuda:0')
+p_key_xy:  tensor([[ 0.42969, -0.25391],
+        [ 0.95703,  0.13281]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.04167, 0.13542],
+        [0.60416, 0.13542]], device='cuda:0')
+p_key_xy:  tensor([[ 0.54883,  0.13281],
+        [ 0.61328, -0.35938]], device='cuda:0', dtype=torch.float16, grad_fn=<SliceBackward0>)
+key_xy:  tensor([[0.02083, 0.56771],
+        [0.30208, 0.06771]], device='cuda:0')
+b lkey:  tensor([0.76402], device='cuda:0', grad_fn=<AddBackward0>)
+lkey loss:  tensor([0.15280], device='cuda:0', grad_fn=<MulBackward0>)
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100% 4/4 [00:00<00:00,  4.23it/s]
+                 all        236        580   0.000466     0.0569   0.000257   6.48e-05
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+     1/149     21.9G   0.08558   0.03476    0.1605       361      1280:   3% 1/34 [00:00<00:16,  1.99it/s]
+     1/149     21.9G   0.08379   0.03263    0.1513       373      1280:  12% 4/34 [00:02<00:18,  1.64it/s]
+Traceback (most recent call last):
+  File "/home/rumex/keypoint_yolo/train.py", line 626, in <module>
+    main(opt)
+  File "/home/rumex/keypoint_yolo/train.py", line 523, in main
+    train(opt.hyp, opt, device, callbacks)
+  File "/home/rumex/keypoint_yolo/train.py", line 331, in train
+    scaler.step(optimizer)  # optimizer.step
+  File "/home/rumex/anaconda3/lib/python3.9/site-packages/torch/cuda/amp/grad_scaler.py", line 338, in step
+    retval = self._maybe_opt_step(optimizer, optimizer_state, *args, **kwargs)
+  File "/home/rumex/anaconda3/lib/python3.9/site-packages/torch/cuda/amp/grad_scaler.py", line 284, in _maybe_opt_step
+    if not sum(v.item() for v in optimizer_state["found_inf_per_device"].values()):
+  File "/home/rumex/anaconda3/lib/python3.9/site-packages/torch/cuda/amp/grad_scaler.py", line 284, in <genexpr>
+    if not sum(v.item() for v in optimizer_state["found_inf_per_device"].values()):
+KeyboardInterrupt

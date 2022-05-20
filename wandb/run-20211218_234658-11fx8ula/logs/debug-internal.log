@@ -1,0 +1,362 @@
+2021-12-18 23:46:58,596 INFO    MainThread:418437 [internal.py:wandb_internal():87] W&B internal server running at pid: 418437, started at: 2021-12-18 23:46:58.595943
+2021-12-18 23:46:58,597 INFO    WriterThread:418437 [datastore.py:open_for_write():77] open: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/run-11fx8ula.wandb
+2021-12-18 23:46:58,597 DEBUG   HandlerThread:418437 [handler.py:handle_request():130] handle_request: check_version
+2021-12-18 23:46:58,597 DEBUG   SenderThread:418437 [sender.py:send():238] send: header
+2021-12-18 23:46:58,597 DEBUG   SenderThread:418437 [sender.py:send_request():252] send_request: check_version
+2021-12-18 23:46:58,662 DEBUG   SenderThread:418437 [sender.py:send():238] send: run
+2021-12-18 23:46:58,672 INFO    SenderThread:418437 [sender.py:_maybe_setup_resume():505] checking resume status for None/YOLOv5/11fx8ula
+2021-12-18 23:46:59,235 INFO    SenderThread:418437 [dir_watcher.py:__init__():169] watching files in: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files
+2021-12-18 23:46:59,235 INFO    SenderThread:418437 [sender.py:_start_run_threads():825] run started: 11fx8ula with start time 1639867618
+2021-12-18 23:46:59,235 DEBUG   SenderThread:418437 [sender.py:send():238] send: summary
+2021-12-18 23:46:59,236 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file wandb-summary.json with policy end
+2021-12-18 23:46:59,237 DEBUG   HandlerThread:418437 [handler.py:handle_request():130] handle_request: run_start
+2021-12-18 23:46:59,240 DEBUG   HandlerThread:418437 [meta.py:__init__():40] meta init
+2021-12-18 23:46:59,240 DEBUG   HandlerThread:418437 [meta.py:__init__():54] meta init done
+2021-12-18 23:46:59,240 DEBUG   HandlerThread:418437 [meta.py:probe():214] probe
+2021-12-18 23:46:59,246 DEBUG   HandlerThread:418437 [meta.py:_setup_git():204] setup git
+2021-12-18 23:46:59,254 DEBUG   HandlerThread:418437 [meta.py:_setup_git():211] setup git done
+2021-12-18 23:46:59,254 DEBUG   HandlerThread:418437 [meta.py:_save_pip():58] save pip
+2021-12-18 23:46:59,254 DEBUG   HandlerThread:418437 [meta.py:_save_pip():72] save pip done
+2021-12-18 23:46:59,254 DEBUG   HandlerThread:418437 [meta.py:_save_conda():79] save conda
+2021-12-18 23:47:00,236 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/conda-environment.yaml
+2021-12-18 23:47:00,236 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/wandb-summary.json
+2021-12-18 23:47:00,236 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/requirements.txt
+2021-12-18 23:47:01,533 DEBUG   HandlerThread:418437 [meta.py:_save_conda():89] save conda done
+2021-12-18 23:47:01,533 DEBUG   HandlerThread:418437 [meta.py:probe():252] probe done
+2021-12-18 23:47:01,580 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:01,580 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file wandb-metadata.json with policy now
+2021-12-18 23:47:01,583 DEBUG   HandlerThread:418437 [handler.py:handle_request():130] handle_request: stop_status
+2021-12-18 23:47:01,583 DEBUG   SenderThread:418437 [sender.py:send_request():252] send_request: stop_status
+2021-12-18 23:47:01,795 DEBUG   SenderThread:418437 [sender.py:send():238] send: config
+2021-12-18 23:47:02,200 INFO    Thread-11 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/3a9mih8x-wandb-metadata.json
+2021-12-18 23:47:02,236 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/conda-environment.yaml
+2021-12-18 23:47:02,236 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/wandb-metadata.json
+2021-12-18 23:47:02,236 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/output.log
+2021-12-18 23:47:06,238 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/output.log
+2021-12-18 23:47:16,241 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/output.log
+2021-12-18 23:47:18,241 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/output.log
+2021-12-18 23:47:18,504 DEBUG   HandlerThread:418437 [handler.py:handle_request():130] handle_request: stop_status
+2021-12-18 23:47:18,504 DEBUG   SenderThread:418437 [sender.py:send_request():252] send_request: stop_status
+2021-12-18 23:47:20,242 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/output.log
+2021-12-18 23:47:22,243 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/output.log
+2021-12-18 23:47:24,243 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/output.log
+2021-12-18 23:47:26,244 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/output.log
+2021-12-18 23:47:27,492 DEBUG   SenderThread:418437 [sender.py:send():238] send: stats
+2021-12-18 23:47:28,245 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/output.log
+2021-12-18 23:47:29,245 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/config.yaml
+2021-12-18 23:47:30,245 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/output.log
+2021-12-18 23:47:32,246 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/output.log
+2021-12-18 23:47:33,680 DEBUG   HandlerThread:418437 [handler.py:handle_request():130] handle_request: stop_status
+2021-12-18 23:47:33,681 DEBUG   SenderThread:418437 [sender.py:send_request():252] send_request: stop_status
+2021-12-18 23:47:34,247 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/output.log
+2021-12-18 23:47:35,347 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,347 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/images/BoundingBoxDebugger_0_0.png with policy now
+2021-12-18 23:47:35,348 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,349 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/metadata/boxes2D/BoundingBoxDebugger_0_00.boxes2D.json with policy now
+2021-12-18 23:47:35,349 DEBUG   SenderThread:418437 [sender.py:send():238] send: config
+2021-12-18 23:47:35,349 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,349 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/images/BoundingBoxDebugger_0_1.png with policy now
+2021-12-18 23:47:35,350 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,350 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/metadata/boxes2D/BoundingBoxDebugger_0_10.boxes2D.json with policy now
+2021-12-18 23:47:35,351 DEBUG   SenderThread:418437 [sender.py:send():238] send: config
+2021-12-18 23:47:35,351 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,351 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/images/BoundingBoxDebugger_0_2.png with policy now
+2021-12-18 23:47:35,352 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,352 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/metadata/boxes2D/BoundingBoxDebugger_0_20.boxes2D.json with policy now
+2021-12-18 23:47:35,353 DEBUG   SenderThread:418437 [sender.py:send():238] send: config
+2021-12-18 23:47:35,353 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,353 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/images/BoundingBoxDebugger_0_3.png with policy now
+2021-12-18 23:47:35,353 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,353 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/metadata/boxes2D/BoundingBoxDebugger_0_30.boxes2D.json with policy now
+2021-12-18 23:47:35,353 DEBUG   SenderThread:418437 [sender.py:send():238] send: config
+2021-12-18 23:47:35,354 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,354 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/images/BoundingBoxDebugger_0_4.png with policy now
+2021-12-18 23:47:35,354 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,354 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/metadata/boxes2D/BoundingBoxDebugger_0_40.boxes2D.json with policy now
+2021-12-18 23:47:35,354 DEBUG   SenderThread:418437 [sender.py:send():238] send: config
+2021-12-18 23:47:35,354 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,354 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/images/BoundingBoxDebugger_0_5.png with policy now
+2021-12-18 23:47:35,354 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,354 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/metadata/boxes2D/BoundingBoxDebugger_0_50.boxes2D.json with policy now
+2021-12-18 23:47:35,355 DEBUG   SenderThread:418437 [sender.py:send():238] send: config
+2021-12-18 23:47:35,355 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,355 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/images/BoundingBoxDebugger_0_6.png with policy now
+2021-12-18 23:47:35,355 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,355 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/metadata/boxes2D/BoundingBoxDebugger_0_60.boxes2D.json with policy now
+2021-12-18 23:47:35,374 DEBUG   SenderThread:418437 [sender.py:send():238] send: config
+2021-12-18 23:47:35,383 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,383 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/images/BoundingBoxDebugger_0_7.png with policy now
+2021-12-18 23:47:35,384 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,384 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/metadata/boxes2D/BoundingBoxDebugger_0_70.boxes2D.json with policy now
+2021-12-18 23:47:35,384 DEBUG   SenderThread:418437 [sender.py:send():238] send: config
+2021-12-18 23:47:35,384 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,384 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/images/BoundingBoxDebugger_0_8.png with policy now
+2021-12-18 23:47:35,384 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,384 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/metadata/boxes2D/BoundingBoxDebugger_0_80.boxes2D.json with policy now
+2021-12-18 23:47:35,384 DEBUG   SenderThread:418437 [sender.py:send():238] send: config
+2021-12-18 23:47:35,385 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,385 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/images/BoundingBoxDebugger_0_9.png with policy now
+2021-12-18 23:47:35,385 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,385 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/metadata/boxes2D/BoundingBoxDebugger_0_90.boxes2D.json with policy now
+2021-12-18 23:47:35,385 DEBUG   SenderThread:418437 [sender.py:send():238] send: config
+2021-12-18 23:47:35,385 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,385 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/images/BoundingBoxDebugger_0_10.png with policy now
+2021-12-18 23:47:35,386 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,386 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/metadata/boxes2D/BoundingBoxDebugger_0_100.boxes2D.json with policy now
+2021-12-18 23:47:35,386 DEBUG   SenderThread:418437 [sender.py:send():238] send: config
+2021-12-18 23:47:35,386 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,386 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/images/BoundingBoxDebugger_0_11.png with policy now
+2021-12-18 23:47:35,386 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,386 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/metadata/boxes2D/BoundingBoxDebugger_0_110.boxes2D.json with policy now
+2021-12-18 23:47:35,387 DEBUG   SenderThread:418437 [sender.py:send():238] send: config
+2021-12-18 23:47:35,387 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,387 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/images/BoundingBoxDebugger_0_12.png with policy now
+2021-12-18 23:47:35,387 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,387 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/metadata/boxes2D/BoundingBoxDebugger_0_120.boxes2D.json with policy now
+2021-12-18 23:47:35,387 DEBUG   SenderThread:418437 [sender.py:send():238] send: config
+2021-12-18 23:47:35,388 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,388 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/images/BoundingBoxDebugger_0_13.png with policy now
+2021-12-18 23:47:35,392 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,392 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/metadata/boxes2D/BoundingBoxDebugger_0_130.boxes2D.json with policy now
+2021-12-18 23:47:35,393 DEBUG   SenderThread:418437 [sender.py:send():238] send: config
+2021-12-18 23:47:35,393 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,393 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/images/BoundingBoxDebugger_0_14.png with policy now
+2021-12-18 23:47:35,394 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,394 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/metadata/boxes2D/BoundingBoxDebugger_0_140.boxes2D.json with policy now
+2021-12-18 23:47:35,394 DEBUG   SenderThread:418437 [sender.py:send():238] send: config
+2021-12-18 23:47:35,395 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,395 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/images/BoundingBoxDebugger_0_15.png with policy now
+2021-12-18 23:47:35,398 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:35,398 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/metadata/boxes2D/BoundingBoxDebugger_0_150.boxes2D.json with policy now
+2021-12-18 23:47:35,398 DEBUG   SenderThread:418437 [sender.py:send():238] send: config
+2021-12-18 23:47:35,540 DEBUG   SenderThread:418437 [sender.py:send():238] send: history
+2021-12-18 23:47:35,540 DEBUG   SenderThread:418437 [sender.py:send():238] send: summary
+2021-12-18 23:47:35,540 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file wandb-summary.json with policy end
+2021-12-18 23:47:36,024 INFO    Thread-13 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/2psmgu1n-media/metadata/boxes2D/BoundingBoxDebugger_0_00.boxes2D.json
+2021-12-18 23:47:36,109 INFO    Thread-15 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/nmjy0odc-media/metadata/boxes2D/BoundingBoxDebugger_0_10.boxes2D.json
+2021-12-18 23:47:36,116 INFO    Thread-17 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/lzc3w3pg-media/metadata/boxes2D/BoundingBoxDebugger_0_20.boxes2D.json
+2021-12-18 23:47:36,173 INFO    Thread-19 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/1ggyvry2-media/metadata/boxes2D/BoundingBoxDebugger_0_30.boxes2D.json
+2021-12-18 23:47:36,262 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/wandb-summary.json
+2021-12-18 23:47:36,262 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/output.log
+2021-12-18 23:47:36,262 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_80.boxes2D.json
+2021-12-18 23:47:36,262 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_3.png
+2021-12-18 23:47:36,262 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_50.boxes2D.json
+2021-12-18 23:47:36,262 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_1.png
+2021-12-18 23:47:36,262 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_110.boxes2D.json
+2021-12-18 23:47:36,262 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_13.png
+2021-12-18 23:47:36,262 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_9.png
+2021-12-18 23:47:36,262 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_10.png
+2021-12-18 23:47:36,262 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_70.boxes2D.json
+2021-12-18 23:47:36,263 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_8.png
+2021-12-18 23:47:36,263 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_100.boxes2D.json
+2021-12-18 23:47:36,263 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_20.boxes2D.json
+2021-12-18 23:47:36,263 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_10.boxes2D.json
+2021-12-18 23:47:36,263 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_90.boxes2D.json
+2021-12-18 23:47:36,263 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_7.png
+2021-12-18 23:47:36,263 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_15.png
+2021-12-18 23:47:36,263 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_2.png
+2021-12-18 23:47:36,263 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_00.boxes2D.json
+2021-12-18 23:47:36,263 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_130.boxes2D.json
+2021-12-18 23:47:36,263 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_5.png
+2021-12-18 23:47:36,263 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_60.boxes2D.json
+2021-12-18 23:47:36,263 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_40.boxes2D.json
+2021-12-18 23:47:36,264 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_14.png
+2021-12-18 23:47:36,264 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_30.boxes2D.json
+2021-12-18 23:47:36,264 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_6.png
+2021-12-18 23:47:36,264 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_0.png
+2021-12-18 23:47:36,264 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_140.boxes2D.json
+2021-12-18 23:47:36,264 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_11.png
+2021-12-18 23:47:36,264 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_120.boxes2D.json
+2021-12-18 23:47:36,264 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_150.boxes2D.json
+2021-12-18 23:47:36,264 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_12.png
+2021-12-18 23:47:36,264 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_4.png
+2021-12-18 23:47:36,264 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images
+2021-12-18 23:47:36,264 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D
+2021-12-18 23:47:36,264 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata
+2021-12-18 23:47:36,264 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media
+2021-12-18 23:47:36,274 INFO    Thread-21 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/e4hl8o15-media/metadata/boxes2D/BoundingBoxDebugger_0_40.boxes2D.json
+2021-12-18 23:47:36,364 INFO    Thread-23 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/33q5iqzx-media/metadata/boxes2D/BoundingBoxDebugger_0_50.boxes2D.json
+2021-12-18 23:47:36,403 INFO    Thread-25 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/127uuu3v-media/metadata/boxes2D/BoundingBoxDebugger_0_60.boxes2D.json
+2021-12-18 23:47:36,600 INFO    Thread-29 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/2rj9mfit-media/metadata/boxes2D/BoundingBoxDebugger_0_80.boxes2D.json
+2021-12-18 23:47:36,603 INFO    Thread-27 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/jvzd6lq2-media/metadata/boxes2D/BoundingBoxDebugger_0_70.boxes2D.json
+2021-12-18 23:47:36,659 INFO    Thread-12 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/2aak6fnd-media/images/BoundingBoxDebugger_0_0.png
+2021-12-18 23:47:36,744 INFO    Thread-14 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/3c2q8zua-media/images/BoundingBoxDebugger_0_1.png
+2021-12-18 23:47:36,755 INFO    Thread-31 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/1lxpe9mc-media/metadata/boxes2D/BoundingBoxDebugger_0_90.boxes2D.json
+2021-12-18 23:47:36,839 INFO    Thread-33 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/2um7c76w-media/metadata/boxes2D/BoundingBoxDebugger_0_100.boxes2D.json
+2021-12-18 23:47:37,060 INFO    Thread-35 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/2m3rcy3g-media/metadata/boxes2D/BoundingBoxDebugger_0_110.boxes2D.json
+2021-12-18 23:47:37,118 INFO    Thread-39 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/1cpo5cko-media/metadata/boxes2D/BoundingBoxDebugger_0_130.boxes2D.json
+2021-12-18 23:47:37,376 INFO    Thread-37 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/38wmn6a2-media/metadata/boxes2D/BoundingBoxDebugger_0_120.boxes2D.json
+2021-12-18 23:47:37,385 INFO    Thread-41 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/39f1o80y-media/metadata/boxes2D/BoundingBoxDebugger_0_140.boxes2D.json
+2021-12-18 23:47:37,392 INFO    Thread-16 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/q2stpqtt-media/images/BoundingBoxDebugger_0_2.png
+2021-12-18 23:47:37,401 INFO    Thread-43 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/bnnfda1z-media/metadata/boxes2D/BoundingBoxDebugger_0_150.boxes2D.json
+2021-12-18 23:47:37,484 INFO    Thread-18 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/i7873kwr-media/images/BoundingBoxDebugger_0_3.png
+2021-12-18 23:47:37,515 INFO    Thread-22 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/c299upu8-media/images/BoundingBoxDebugger_0_5.png
+2021-12-18 23:47:37,519 INFO    Thread-30 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/2cs6cuxt-media/images/BoundingBoxDebugger_0_9.png
+2021-12-18 23:47:37,692 INFO    Thread-26 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/2zzo2shi-media/images/BoundingBoxDebugger_0_7.png
+2021-12-18 23:47:37,760 INFO    Thread-28 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/1bzz82fn-media/images/BoundingBoxDebugger_0_8.png
+2021-12-18 23:47:37,772 INFO    Thread-20 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/1f1cawds-media/images/BoundingBoxDebugger_0_4.png
+2021-12-18 23:47:37,819 INFO    Thread-36 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/n5swso64-media/images/BoundingBoxDebugger_0_12.png
+2021-12-18 23:47:37,855 INFO    Thread-24 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/1oncxth7-media/images/BoundingBoxDebugger_0_6.png
+2021-12-18 23:47:37,891 INFO    Thread-32 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/ivg03mwh-media/images/BoundingBoxDebugger_0_10.png
+2021-12-18 23:47:37,960 INFO    Thread-34 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/25s5ei6b-media/images/BoundingBoxDebugger_0_11.png
+2021-12-18 23:47:37,975 INFO    Thread-38 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/2d8nnxyx-media/images/BoundingBoxDebugger_0_13.png
+2021-12-18 23:47:38,085 INFO    Thread-40 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/3r2ad31g-media/images/BoundingBoxDebugger_0_14.png
+2021-12-18 23:47:38,099 INFO    Thread-42 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/36ct6vsv-media/images/BoundingBoxDebugger_0_15.png
+2021-12-18 23:47:38,263 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/output.log
+2021-12-18 23:47:39,684 DEBUG   HandlerThread:418437 [handler.py:handle_request():130] handle_request: log_artifact
+2021-12-18 23:47:39,685 DEBUG   SenderThread:418437 [sender.py:send_request():252] send_request: log_artifact
+2021-12-18 23:47:40,265 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/output.log
+2021-12-18 23:47:40,266 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_created():217] file/dir created: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/Results_1_0.png
+2021-12-18 23:47:40,266 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images
+2021-12-18 23:47:42,413 DEBUG   HandlerThread:418437 [handler.py:handle_request():130] handle_request: poll_exit
+2021-12-18 23:47:43,266 INFO    Thread-8  :418437 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/output.log
+2021-12-18 23:47:44,287 INFO    Thread-45 :418437 [upload_job.py:push():95] Uploaded file /home/rumex/.cache/wandb/artifacts/obj/md5/07/f41d1dccfe2c1e90189d6ba679a1ed
+2021-12-18 23:47:45,414 INFO    SenderThread:418437 [sender.py:send_request_log_artifact():989] logged artifact run_11fx8ula_model - {'id': 'QXJ0aWZhY3Q6NTA1ODI0MTY=', 'digest': '6578da02d9fca0917920d17831e6c721', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjc5MTkwNzc=', 'latestArtifact': None}, 'version': 'latest'}
+2021-12-18 23:47:45,415 DEBUG   SenderThread:418437 [sender.py:send():238] send: files
+2021-12-18 23:47:45,415 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file media/images/Results_1_0.png with policy now
+2021-12-18 23:47:45,415 DEBUG   SenderThread:418437 [sender.py:send():238] send: history
+2021-12-18 23:47:45,415 DEBUG   SenderThread:418437 [sender.py:send():238] send: summary
+2021-12-18 23:47:45,417 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file wandb-summary.json with policy end
+2021-12-18 23:47:45,417 DEBUG   SenderThread:418437 [sender.py:send():238] send: telemetry
+2021-12-18 23:47:45,417 DEBUG   SenderThread:418437 [sender.py:send():238] send: exit
+2021-12-18 23:47:45,417 INFO    SenderThread:418437 [sender.py:send_exit():370] handling exit code: 0
+2021-12-18 23:47:45,417 INFO    SenderThread:418437 [sender.py:send_exit():372] handling runtime: 43
+2021-12-18 23:47:45,432 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file wandb-summary.json with policy end
+2021-12-18 23:47:45,432 INFO    SenderThread:418437 [sender.py:send_exit():382] send defer
+2021-12-18 23:47:45,432 DEBUG   SenderThread:418437 [sender.py:send_request():252] send_request: poll_exit
+2021-12-18 23:47:45,432 DEBUG   HandlerThread:418437 [handler.py:handle_request():130] handle_request: defer
+2021-12-18 23:47:45,432 INFO    HandlerThread:418437 [handler.py:handle_request_defer():147] handle defer: 0
+2021-12-18 23:47:45,432 DEBUG   SenderThread:418437 [sender.py:send_request():252] send_request: defer
+2021-12-18 23:47:45,432 INFO    SenderThread:418437 [sender.py:send_request_defer():391] handle sender defer: 0
+2021-12-18 23:47:45,432 INFO    SenderThread:418437 [sender.py:transition_state():395] send defer: 1
+2021-12-18 23:47:45,432 DEBUG   HandlerThread:418437 [handler.py:handle_request():130] handle_request: defer
+2021-12-18 23:47:45,433 INFO    HandlerThread:418437 [handler.py:handle_request_defer():147] handle defer: 1
+2021-12-18 23:47:45,458 DEBUG   SenderThread:418437 [sender.py:send_request():252] send_request: defer
+2021-12-18 23:47:45,458 INFO    SenderThread:418437 [sender.py:send_request_defer():391] handle sender defer: 1
+2021-12-18 23:47:45,458 INFO    SenderThread:418437 [sender.py:transition_state():395] send defer: 2
+2021-12-18 23:47:45,458 DEBUG   SenderThread:418437 [sender.py:send():238] send: stats
+2021-12-18 23:47:45,458 DEBUG   HandlerThread:418437 [handler.py:handle_request():130] handle_request: defer
+2021-12-18 23:47:45,459 INFO    HandlerThread:418437 [handler.py:handle_request_defer():147] handle defer: 2
+2021-12-18 23:47:45,459 DEBUG   SenderThread:418437 [sender.py:send_request():252] send_request: defer
+2021-12-18 23:47:45,459 INFO    SenderThread:418437 [sender.py:send_request_defer():391] handle sender defer: 2
+2021-12-18 23:47:45,459 INFO    SenderThread:418437 [sender.py:transition_state():395] send defer: 3
+2021-12-18 23:47:45,459 DEBUG   HandlerThread:418437 [handler.py:handle_request():130] handle_request: defer
+2021-12-18 23:47:45,459 INFO    HandlerThread:418437 [handler.py:handle_request_defer():147] handle defer: 3
+2021-12-18 23:47:45,459 DEBUG   SenderThread:418437 [sender.py:send():238] send: summary
+2021-12-18 23:47:45,459 INFO    SenderThread:418437 [sender.py:_save_file():960] saving file wandb-summary.json with policy end
+2021-12-18 23:47:45,459 DEBUG   SenderThread:418437 [sender.py:send_request():252] send_request: defer
+2021-12-18 23:47:45,459 INFO    SenderThread:418437 [sender.py:send_request_defer():391] handle sender defer: 3
+2021-12-18 23:47:45,459 INFO    SenderThread:418437 [sender.py:transition_state():395] send defer: 4
+2021-12-18 23:47:45,460 DEBUG   HandlerThread:418437 [handler.py:handle_request():130] handle_request: defer
+2021-12-18 23:47:45,460 INFO    HandlerThread:418437 [handler.py:handle_request_defer():147] handle defer: 4
+2021-12-18 23:47:45,460 DEBUG   SenderThread:418437 [sender.py:send_request():252] send_request: defer
+2021-12-18 23:47:45,460 INFO    SenderThread:418437 [sender.py:send_request_defer():391] handle sender defer: 4
+2021-12-18 23:47:45,534 DEBUG   HandlerThread:418437 [handler.py:handle_request():130] handle_request: poll_exit
+2021-12-18 23:47:45,669 INFO    SenderThread:418437 [sender.py:transition_state():395] send defer: 5
+2021-12-18 23:47:45,669 DEBUG   SenderThread:418437 [sender.py:send_request():252] send_request: poll_exit
+2021-12-18 23:47:45,670 DEBUG   HandlerThread:418437 [handler.py:handle_request():130] handle_request: defer
+2021-12-18 23:47:45,670 INFO    HandlerThread:418437 [handler.py:handle_request_defer():147] handle defer: 5
+2021-12-18 23:47:45,670 DEBUG   SenderThread:418437 [sender.py:send_request():252] send_request: defer
+2021-12-18 23:47:45,670 INFO    SenderThread:418437 [sender.py:send_request_defer():391] handle sender defer: 5
+2021-12-18 23:47:45,670 INFO    SenderThread:418437 [dir_watcher.py:finish():283] shutting down directory watcher
+2021-12-18 23:47:45,771 DEBUG   HandlerThread:418437 [handler.py:handle_request():130] handle_request: poll_exit
+2021-12-18 23:47:46,130 INFO    Thread-46 :418437 [upload_job.py:push():137] Uploaded file /tmp/tmp4dl5ncduwandb/2zzggk7k-media/images/Results_1_0.png
+2021-12-18 23:47:46,268 INFO    SenderThread:418437 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/wandb-summary.json
+2021-12-18 23:47:46,268 INFO    SenderThread:418437 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/config.yaml
+2021-12-18 23:47:46,268 INFO    SenderThread:418437 [dir_watcher.py:finish():313] scan: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files
+2021-12-18 23:47:46,269 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/conda-environment.yaml conda-environment.yaml
+2021-12-18 23:47:46,269 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/requirements.txt requirements.txt
+2021-12-18 23:47:46,269 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/output.log output.log
+2021-12-18 23:47:46,269 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/wandb-metadata.json wandb-metadata.json
+2021-12-18 23:47:46,269 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/wandb-summary.json wandb-summary.json
+2021-12-18 23:47:46,269 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/config.yaml config.yaml
+2021-12-18 23:47:46,273 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_30.boxes2D.json media/metadata/boxes2D/BoundingBoxDebugger_0_30.boxes2D.json
+2021-12-18 23:47:46,273 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_120.boxes2D.json media/metadata/boxes2D/BoundingBoxDebugger_0_120.boxes2D.json
+2021-12-18 23:47:46,273 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_140.boxes2D.json media/metadata/boxes2D/BoundingBoxDebugger_0_140.boxes2D.json
+2021-12-18 23:47:46,273 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_10.boxes2D.json media/metadata/boxes2D/BoundingBoxDebugger_0_10.boxes2D.json
+2021-12-18 23:47:46,273 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_00.boxes2D.json media/metadata/boxes2D/BoundingBoxDebugger_0_00.boxes2D.json
+2021-12-18 23:47:46,273 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_60.boxes2D.json media/metadata/boxes2D/BoundingBoxDebugger_0_60.boxes2D.json
+2021-12-18 23:47:46,273 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_130.boxes2D.json media/metadata/boxes2D/BoundingBoxDebugger_0_130.boxes2D.json
+2021-12-18 23:47:46,273 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_100.boxes2D.json media/metadata/boxes2D/BoundingBoxDebugger_0_100.boxes2D.json
+2021-12-18 23:47:46,273 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_20.boxes2D.json media/metadata/boxes2D/BoundingBoxDebugger_0_20.boxes2D.json
+2021-12-18 23:47:46,273 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_80.boxes2D.json media/metadata/boxes2D/BoundingBoxDebugger_0_80.boxes2D.json
+2021-12-18 23:47:46,274 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_150.boxes2D.json media/metadata/boxes2D/BoundingBoxDebugger_0_150.boxes2D.json
+2021-12-18 23:47:46,274 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_90.boxes2D.json media/metadata/boxes2D/BoundingBoxDebugger_0_90.boxes2D.json
+2021-12-18 23:47:46,274 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_110.boxes2D.json media/metadata/boxes2D/BoundingBoxDebugger_0_110.boxes2D.json
+2021-12-18 23:47:46,274 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_70.boxes2D.json media/metadata/boxes2D/BoundingBoxDebugger_0_70.boxes2D.json
+2021-12-18 23:47:46,274 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_50.boxes2D.json media/metadata/boxes2D/BoundingBoxDebugger_0_50.boxes2D.json
+2021-12-18 23:47:46,274 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/metadata/boxes2D/BoundingBoxDebugger_0_40.boxes2D.json media/metadata/boxes2D/BoundingBoxDebugger_0_40.boxes2D.json
+2021-12-18 23:47:46,285 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_15.png media/images/BoundingBoxDebugger_0_15.png
+2021-12-18 23:47:46,285 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_4.png media/images/BoundingBoxDebugger_0_4.png
+2021-12-18 23:47:46,285 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_12.png media/images/BoundingBoxDebugger_0_12.png
+2021-12-18 23:47:46,285 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_7.png media/images/BoundingBoxDebugger_0_7.png
+2021-12-18 23:47:46,285 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_14.png media/images/BoundingBoxDebugger_0_14.png
+2021-12-18 23:47:46,285 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_11.png media/images/BoundingBoxDebugger_0_11.png
+2021-12-18 23:47:46,285 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/Results_1_0.png media/images/Results_1_0.png
+2021-12-18 23:47:46,285 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_9.png media/images/BoundingBoxDebugger_0_9.png
+2021-12-18 23:47:46,285 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_3.png media/images/BoundingBoxDebugger_0_3.png
+2021-12-18 23:47:46,285 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_0.png media/images/BoundingBoxDebugger_0_0.png
+2021-12-18 23:47:46,285 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_2.png media/images/BoundingBoxDebugger_0_2.png
+2021-12-18 23:47:46,285 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_1.png media/images/BoundingBoxDebugger_0_1.png
+2021-12-18 23:47:46,285 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_8.png media/images/BoundingBoxDebugger_0_8.png
+2021-12-18 23:47:46,285 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_13.png media/images/BoundingBoxDebugger_0_13.png
+2021-12-18 23:47:46,285 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_5.png media/images/BoundingBoxDebugger_0_5.png
+2021-12-18 23:47:46,285 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_6.png media/images/BoundingBoxDebugger_0_6.png
+2021-12-18 23:47:46,285 INFO    SenderThread:418437 [dir_watcher.py:finish():327] scan save: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/media/images/BoundingBoxDebugger_0_10.png media/images/BoundingBoxDebugger_0_10.png
+2021-12-18 23:47:46,286 INFO    SenderThread:418437 [sender.py:transition_state():395] send defer: 6
+2021-12-18 23:47:46,286 DEBUG   SenderThread:418437 [sender.py:send_request():252] send_request: poll_exit
+2021-12-18 23:47:46,286 DEBUG   HandlerThread:418437 [handler.py:handle_request():130] handle_request: defer
+2021-12-18 23:47:46,286 INFO    HandlerThread:418437 [handler.py:handle_request_defer():147] handle defer: 6
+2021-12-18 23:47:46,286 DEBUG   SenderThread:418437 [sender.py:send_request():252] send_request: defer
+2021-12-18 23:47:46,286 INFO    SenderThread:418437 [sender.py:send_request_defer():391] handle sender defer: 6
+2021-12-18 23:47:46,286 INFO    SenderThread:418437 [file_pusher.py:finish():177] shutting down file pusher
+2021-12-18 23:47:46,387 DEBUG   HandlerThread:418437 [handler.py:handle_request():130] handle_request: poll_exit
+2021-12-18 23:47:46,388 DEBUG   SenderThread:418437 [sender.py:send_request():252] send_request: poll_exit
+2021-12-18 23:47:46,489 DEBUG   HandlerThread:418437 [handler.py:handle_request():130] handle_request: poll_exit
+2021-12-18 23:47:46,489 DEBUG   SenderThread:418437 [sender.py:send_request():252] send_request: poll_exit
+2021-12-18 23:47:46,591 DEBUG   HandlerThread:418437 [handler.py:handle_request():130] handle_request: poll_exit
+2021-12-18 23:47:46,591 DEBUG   SenderThread:418437 [sender.py:send_request():252] send_request: poll_exit
+2021-12-18 23:47:46,693 DEBUG   HandlerThread:418437 [handler.py:handle_request():130] handle_request: poll_exit
+2021-12-18 23:47:46,693 DEBUG   SenderThread:418437 [sender.py:send_request():252] send_request: poll_exit
+2021-12-18 23:47:46,795 DEBUG   HandlerThread:418437 [handler.py:handle_request():130] handle_request: poll_exit
+2021-12-18 23:47:46,795 DEBUG   SenderThread:418437 [sender.py:send_request():252] send_request: poll_exit
+2021-12-18 23:47:46,816 INFO    Thread-49 :418437 [upload_job.py:push():137] Uploaded file /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/output.log
+2021-12-18 23:47:46,818 INFO    Thread-51 :418437 [upload_job.py:push():137] Uploaded file /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/config.yaml
+2021-12-18 23:47:46,819 INFO    Thread-50 :418437 [upload_job.py:push():137] Uploaded file /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/wandb-summary.json
+2021-12-18 23:47:46,849 INFO    Thread-47 :418437 [upload_job.py:push():137] Uploaded file /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/conda-environment.yaml
+2021-12-18 23:47:46,894 INFO    Thread-48 :418437 [upload_job.py:push():137] Uploaded file /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/files/requirements.txt
+2021-12-18 23:47:46,897 DEBUG   HandlerThread:418437 [handler.py:handle_request():130] handle_request: poll_exit
+2021-12-18 23:47:46,897 DEBUG   SenderThread:418437 [sender.py:send_request():252] send_request: poll_exit
+2021-12-18 23:47:46,999 DEBUG   HandlerThread:418437 [handler.py:handle_request():130] handle_request: poll_exit
+2021-12-18 23:47:46,999 DEBUG   SenderThread:418437 [sender.py:send_request():252] send_request: poll_exit
+2021-12-18 23:47:47,094 INFO    Thread-7  :418437 [sender.py:transition_state():395] send defer: 7
+2021-12-18 23:47:47,095 DEBUG   HandlerThread:418437 [handler.py:handle_request():130] handle_request: defer
+2021-12-18 23:47:47,095 INFO    HandlerThread:418437 [handler.py:handle_request_defer():147] handle defer: 7
+2021-12-18 23:47:47,095 DEBUG   SenderThread:418437 [sender.py:send_request():252] send_request: defer
+2021-12-18 23:47:47,095 INFO    SenderThread:418437 [sender.py:send_request_defer():391] handle sender defer: 7
+2021-12-18 23:47:47,101 DEBUG   HandlerThread:418437 [handler.py:handle_request():130] handle_request: poll_exit
+2021-12-18 23:47:47,562 INFO    SenderThread:418437 [sender.py:transition_state():395] send defer: 8
+2021-12-18 23:47:47,563 DEBUG   SenderThread:418437 [sender.py:send_request():252] send_request: poll_exit
+2021-12-18 23:47:47,563 DEBUG   HandlerThread:418437 [handler.py:handle_request():130] handle_request: defer
+2021-12-18 23:47:47,563 INFO    HandlerThread:418437 [handler.py:handle_request_defer():147] handle defer: 8
+2021-12-18 23:47:47,563 DEBUG   SenderThread:418437 [sender.py:send_request():252] send_request: defer
+2021-12-18 23:47:47,563 INFO    SenderThread:418437 [sender.py:send_request_defer():391] handle sender defer: 8
+2021-12-18 23:47:47,564 INFO    SenderThread:418437 [sender.py:transition_state():395] send defer: 9
+2021-12-18 23:47:47,564 DEBUG   HandlerThread:418437 [handler.py:handle_request():130] handle_request: defer
+2021-12-18 23:47:47,564 DEBUG   SenderThread:418437 [sender.py:send():238] send: final
+2021-12-18 23:47:47,564 INFO    HandlerThread:418437 [handler.py:handle_request_defer():147] handle defer: 9
+2021-12-18 23:47:47,564 DEBUG   SenderThread:418437 [sender.py:send():238] send: footer
+2021-12-18 23:47:47,565 DEBUG   SenderThread:418437 [sender.py:send_request():252] send_request: defer
+2021-12-18 23:47:47,565 INFO    SenderThread:418437 [sender.py:send_request_defer():391] handle sender defer: 9
+2021-12-18 23:47:47,664 DEBUG   HandlerThread:418437 [handler.py:handle_request():130] handle_request: poll_exit
+2021-12-18 23:47:47,665 DEBUG   SenderThread:418437 [sender.py:send_request():252] send_request: poll_exit
+2021-12-18 23:47:47,665 INFO    SenderThread:418437 [file_pusher.py:join():182] waiting for file pusher
+2021-12-18 23:47:47,872 DEBUG   HandlerThread:418437 [handler.py:handle_request():130] handle_request: get_summary
+2021-12-18 23:47:47,873 DEBUG   HandlerThread:418437 [handler.py:handle_request():130] handle_request: sampled_history
+2021-12-18 23:47:47,874 DEBUG   HandlerThread:418437 [handler.py:handle_request():130] handle_request: shutdown
+2021-12-18 23:47:47,874 INFO    HandlerThread:418437 [handler.py:finish():731] shutting down handler
+2021-12-18 23:47:48,565 INFO    WriterThread:418437 [datastore.py:close():281] close: /home/rumex/keypoint_yolo/wandb/run-20211218_234658-11fx8ula/run-11fx8ula.wandb
+2021-12-18 23:47:48,871 INFO    SenderThread:418437 [sender.py:finish():1091] shutting down sender
+2021-12-18 23:47:48,871 INFO    SenderThread:418437 [file_pusher.py:finish():177] shutting down file pusher
+2021-12-18 23:47:48,871 INFO    SenderThread:418437 [file_pusher.py:join():182] waiting for file pusher
+2021-12-18 23:47:48,872 INFO    MainThread:418437 [internal.py:handle_exit():77] Internal process exited

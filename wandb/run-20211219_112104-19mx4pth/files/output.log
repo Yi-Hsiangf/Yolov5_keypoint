@@ -1,0 +1,768 @@
+
+Shape of passed values is (3051, 6), indices imply (3051, 4)
+Overriding model.yaml nc=80 with nc=1
+                 from  n    params  module                                  arguments
+  0                -1  1      3520  models.common.Conv                      [3, 32, 6, 2, 2]
+  1                -1  1     18560  models.common.Conv                      [32, 64, 3, 2]
+  2                -1  1     18816  models.common.C3                        [64, 64, 1]
+  3                -1  1     73984  models.common.Conv                      [64, 128, 3, 2]
+  4                -1  2    115712  models.common.C3                        [128, 128, 2]
+  5                -1  1    295424  models.common.Conv                      [128, 256, 3, 2]
+  6                -1  3    625152  models.common.C3                        [256, 256, 3]
+  7                -1  1   1180672  models.common.Conv                      [256, 512, 3, 2]
+  8                -1  1   1182720  models.common.C3                        [512, 512, 1]
+  9                -1  1    656896  models.common.SPPF                      [512, 512, 5]
+ 10                -1  1    131584  models.common.Conv                      [512, 256, 1, 1]
+ 11                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+ 12           [-1, 6]  1         0  models.common.Concat                    [1]
+ 13                -1  1    361984  models.common.C3                        [512, 256, 1, False]
+ 14                -1  1     33024  models.common.Conv                      [256, 128, 1, 1]
+ 15                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+ 16           [-1, 4]  1         0  models.common.Concat                    [1]
+ 17                -1  1     90880  models.common.C3                        [256, 128, 1, False]
+ 18                -1  1    147712  models.common.Conv                      [128, 128, 3, 2]
+ 19          [-1, 14]  1         0  models.common.Concat                    [1]
+ 20                -1  1    296448  models.common.C3                        [256, 256, 1, False]
+ 21                -1  1    590336  models.common.Conv                      [256, 256, 3, 2]
+ 22          [-1, 10]  1         0  models.common.Concat                    [1]
+ 23                -1  1   1182720  models.common.C3                        [512, 512, 1, False]
+ 24      [17, 20, 23]  1     21576  models.yolo.Detect                      [1, [[10, 13, 16, 30, 33, 23], [30, 61, 62, 45, 59, 119], [116, 90, 156, 198, 373, 326]], [128, 256, 512]]
+Model Summary: 270 layers, 7027720 parameters, 7027720 gradients, 15.9 GFLOPs
+Transferred 343/349 items from yolov5s.pt
+Scaled weight_decay = 0.0005
+[34m[1moptimizer:[39m[22m SGD with parameter groups 57 weight, 60 weight (no decay), 60 bias
+[34m[1mtrain: [39m[22mScanning '/home/data/data/2020_Autumn_key/labels/train.cache' images and labels... 1078 found, 0 missing, 239 empty, 2 corrupted: 100%|█████████████████████████████████| 1078/1078 [00:00<?, ?it/s]
+[34m[1mtrain: [39m[22mWARNING: /home/data/data/2020_Autumn_key/images/train/VID_20201101_102143.mp4#t=144.2.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.1329      1.1329]
+[34m[1mtrain: [39m[22mWARNING: /home/data/data/2020_Autumn_key/images/train/VID_20201101_102625.mp4#t=139.5.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [     1.0273      1.0273]
+[34m[1mval: [39m[22mScanning '/home/data/data/2020_Autumn_key/labels/val.cache' images and labels... 236 found, 0 missing, 66 empty, 0 corrupted: 100%|█████████████████████████████████████████| 236/236 [00:00<?, ?it/s]
+Plotting labels to runs/train/exp9/labels.jpg...
+[34m[1mAutoAnchor: [39m[22m5.72 anchors/target, 0.986 Best Possible Recall (BPR). Current anchors are a good fit to dataset ✅
+Image sizes 640 train, 640 val
+Using 8 dataloader workers
+Logging results to [1mruns/train/exp9
+Starting training for 120 epochs...
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+  0%|          | 0/34 [00:00<?, ?it/s]
+
+     0/119     8.46G    0.1181   0.03723   0.04286       439      1280:   0%|          | 0/34 [00:09<?, ?it/s]
+lkey loss:  tensor([0.04321], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04295], device='cuda:0', grad_fn=<MulBackward0>)
+
+     0/119     6.04G    0.1177   0.03515   0.04301       365      1280:   9%|▉         | 3/34 [00:12<01:30,  2.93s/it]
+lkey loss:  tensor([0.04298], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04249], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04434], device='cuda:0', grad_fn=<MulBackward0>)
+
+     0/119     7.22G     0.116   0.03469   0.04323       403      1280:  21%|██        | 7/34 [00:14<00:27,  1.03s/it]
+lkey loss:  tensor([0.04278], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04307], device='cuda:0', grad_fn=<MulBackward0>)
+
+     0/119     21.7G    0.1142   0.03421    0.0432       407      1280:  29%|██▉       | 10/34 [00:16<00:17,  1.40it/s]
+lkey loss:  tensor([0.04308], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04419], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04263], device='cuda:0', grad_fn=<MulBackward0>)
+
+     0/119     21.7G    0.1117   0.03405   0.04319       386      1280:  41%|████      | 14/34 [00:18<00:10,  1.87it/s]
+lkey loss:  tensor([0.04509], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04315], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04248], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04514], device='cuda:0', grad_fn=<MulBackward0>)
+
+     0/119     21.7G    0.1083   0.03382   0.04332       376      1280:  56%|█████▌    | 19/34 [00:20<00:07,  2.08it/s]
+lkey loss:  tensor([0.04366], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04386], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04357], device='cuda:0', grad_fn=<MulBackward0>)
+
+     0/119     21.7G    0.1062   0.03382   0.04337       386      1280:  68%|██████▊   | 23/34 [00:22<00:05,  2.11it/s]
+lkey loss:  tensor([0.04292], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04324], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04446], device='cuda:0', grad_fn=<MulBackward0>)
+
+     0/119     21.7G    0.1044   0.03374    0.0434       375      1280:  79%|███████▉  | 27/34 [00:24<00:03,  2.11it/s]
+lkey loss:  tensor([0.04381], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04467], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04443], device='cuda:0', grad_fn=<MulBackward0>)
+
+     0/119     21.7G    0.1028   0.03368   0.04349       407      1280:  91%|█████████ | 31/34 [00:26<00:01,  2.11it/s]
+lkey loss:  tensor([0.04430], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04476], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04190], device='cuda:0')
+lkey loss:  tensor([0.04283], device='cuda:0')
+lkey loss:  tensor([0.04235], device='cuda:0')
+     0/119     21.7G    0.1016   0.03329   0.04357       143      1280: 100%|██████████| 34/34 [00:27<00:00,  1.22it/s]
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:  75%|███████▌  | 3/4 [00:00<00:00,  4.03it/s]
+lkey loss:  tensor([0.04346], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04394], device='cuda:0', grad_fn=<MulBackward0>)
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 4/4 [00:01<00:00,  3.76it/s]
+                 all        236        580    0.00041       0.05   0.000248   5.82e-05
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+     1/119     21.7G   0.09077   0.03007    0.0437       285      1280:   6%|▌         | 2/34 [00:00<00:15,  2.06it/s]
+lkey loss:  tensor([0.04339], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04287], device='cuda:0', grad_fn=<MulBackward0>)
+
+     1/119     21.7G   0.08932    0.0314   0.04351       359      1280:  15%|█▍        | 5/34 [00:02<00:13,  2.08it/s]
+lkey loss:  tensor([0.04350], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04288], device='cuda:0', grad_fn=<MulBackward0>)
+
+     1/119     21.7G   0.08855    0.0317   0.04337       385      1280:  24%|██▎       | 8/34 [00:04<00:17,  1.47it/s]
+lkey loss:  tensor([0.04306], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04359], device='cuda:0', grad_fn=<MulBackward0>)
+
+     1/119     21.7G   0.08777   0.03258    0.0433       405      1280:  32%|███▏      | 11/34 [00:06<00:14,  1.55it/s]
+lkey loss:  tensor([0.04641], device='cuda:0', grad_fn=<MulBackward0>)
+
+     1/119     21.7G   0.08726   0.03271   0.04356       340      1280:  38%|███▊      | 13/34 [00:08<00:17,  1.19it/s]
+lkey loss:  tensor([0.04450], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04244], device='cuda:0', grad_fn=<MulBackward0>)
+
+     1/119     21.7G   0.08682   0.03274   0.04363       349      1280:  47%|████▋     | 16/34 [00:10<00:12,  1.40it/s]
+lkey loss:  tensor([0.04362], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04331], device='cuda:0', grad_fn=<MulBackward0>)
+
+     1/119     21.7G   0.08605   0.03272   0.04369       317      1280:  59%|█████▉    | 20/34 [00:12<00:07,  1.81it/s]
+lkey loss:  tensor([0.04279], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04329], device='cuda:0', grad_fn=<MulBackward0>)
+
+     1/119     21.7G   0.08571   0.03306   0.04363       396      1280:  65%|██████▍   | 22/34 [00:14<00:09,  1.26it/s]
+lkey loss:  tensor([0.04291], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04378], device='cuda:0', grad_fn=<MulBackward0>)
+
+     1/119     21.7G   0.08481     0.033   0.04353       337      1280:  74%|███████▎  | 25/34 [00:16<00:05,  1.70it/s]
+lkey loss:  tensor([0.04317], device='cuda:0', grad_fn=<MulBackward0>)
+
+     1/119     21.7G   0.08424    0.0331   0.04351       375      1280:  82%|████████▏ | 28/34 [00:18<00:03,  1.75it/s]
+lkey loss:  tensor([0.04308], device='cuda:0', grad_fn=<MulBackward0>)
+
+     1/119     21.7G   0.08405   0.03309   0.04349       340      1280:  85%|████████▌ | 29/34 [00:20<00:05,  1.18s/it]
+lkey loss:  tensor([0.04350], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04435], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04367], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04266], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04190], device='cuda:0')
+     1/119     21.7G   0.08312   0.03342   0.04352       271      1280: 100%|██████████| 34/34 [00:23<00:00,  1.48it/s]
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:  25%|██▌       | 1/4 [00:00<00:00,  5.59it/s]
+lkey loss:  tensor([0.04235], device='cuda:0')
+lkey loss:  tensor([0.04191], device='cuda:0')
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 4/4 [00:00<00:00,  4.19it/s]
+                 all        236        580   0.000523     0.0638   0.000368   8.07e-05
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+     2/119     21.7G   0.07873   0.03686   0.04576       402      1280:   3%|▎         | 1/34 [00:00<00:21,  1.54it/s]
+lkey loss:  tensor([0.04574], device='cuda:0', grad_fn=<MulBackward0>)
+
+     2/119     21.7G   0.07803   0.03572   0.04575       356      1280:   6%|▌         | 2/34 [00:01<00:18,  1.76it/s]
+lkey loss:  tensor([0.04392], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04302], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04331], device='cuda:0', grad_fn=<MulBackward0>)
+
+     2/119     21.7G   0.07582   0.03584   0.04431       374      1280:  21%|██        | 7/34 [00:04<00:15,  1.73it/s]
+lkey loss:  tensor([0.04359], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04329], device='cuda:0', grad_fn=<MulBackward0>)
+
+     2/119     21.7G   0.07536    0.0354   0.04399       407      1280:  29%|██▉       | 10/34 [00:06<00:12,  1.96it/s]
+lkey loss:  tensor([0.04580], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04368], device='cuda:0', grad_fn=<MulBackward0>)
+
+     2/119     21.7G   0.07485    0.0357   0.04412       382      1280:  35%|███▌      | 12/34 [00:08<00:17,  1.29it/s]
+lkey loss:  tensor([0.04442], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04311], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04294], device='cuda:0', grad_fn=<MulBackward0>)
+
+     2/119     21.7G   0.07406    0.0357   0.04401       378      1280:  47%|████▋     | 16/34 [00:10<00:09,  1.83it/s]
+
+     2/119     21.7G   0.07369   0.03551   0.04396       355      1280:  53%|█████▎    | 18/34 [00:11<00:08,  1.97it/s]
+lkey loss:  tensor([0.04412], device='cuda:0', grad_fn=<MulBackward0>)
+
+     2/119     21.7G   0.07328   0.03509   0.04391       339      1280:  59%|█████▉    | 20/34 [00:14<00:14,  1.01s/it]
+lkey loss:  tensor([0.04429], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04345], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04374], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04438], device='cuda:0', grad_fn=<MulBackward0>)
+
+     2/119     21.7G   0.07232   0.03529   0.04392       323      1280:  71%|███████   | 24/34 [00:16<00:06,  1.64it/s]
+
+     2/119     21.7G   0.07208   0.03517   0.04386       361      1280:  76%|███████▋  | 26/34 [00:17<00:04,  1.84it/s]
+lkey loss:  tensor([0.04390], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04320], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04338], device='cuda:0', grad_fn=<MulBackward0>)
+
+     2/119     21.7G    0.0716   0.03514   0.04383       382      1280:  85%|████████▌ | 29/34 [00:20<00:03,  1.42it/s]
+lkey loss:  tensor([0.04473], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04309], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04312], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04236], device='cuda:0', grad_fn=<MulBackward0>)
+     2/119     21.7G    0.0707    0.0346   0.04381       211      1280: 100%|██████████| 34/34 [00:22<00:00,  1.50it/s]
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:   0%|          | 0/4 [00:00<?, ?it/s]
+lkey loss:  tensor([0.04283], device='cuda:0')
+lkey loss:  tensor([0.04235], device='cuda:0')
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 4/4 [00:00<00:00,  5.04it/s]
+                 all        236        580   0.000664      0.081   0.000476   0.000123
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+  0%|          | 0/34 [00:00<?, ?it/s]
+lkey loss:  tensor([0.04307], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04421], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04498], device='cuda:0', grad_fn=<MulBackward0>)
+
+     3/119     21.7G    0.0647   0.03187   0.04395       387      1280:  12%|█▏        | 4/34 [00:02<00:18,  1.66it/s]
+lkey loss:  tensor([0.04327], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04376], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04356], device='cuda:0', grad_fn=<MulBackward0>)
+
+     3/119     21.7G   0.06536   0.03174   0.04365       334      1280:  24%|██▎       | 8/34 [00:04<00:13,  1.97it/s]
+lkey loss:  tensor([0.04356], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04422], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04418], device='cuda:0', grad_fn=<MulBackward0>)
+
+     3/119     21.7G   0.06506   0.03057   0.04374       358      1280:  32%|███▏      | 11/34 [00:08<00:19,  1.18it/s]
+lkey loss:  tensor([0.04269], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04325], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04339], device='cuda:0', grad_fn=<MulBackward0>)
+
+     3/119     21.7G   0.06488    0.0301   0.04367       352      1280:  44%|████▍     | 15/34 [00:10<00:10,  1.77it/s]
+
+     3/119     21.7G   0.06474   0.02987   0.04363       318      1280:  47%|████▋     | 16/34 [00:10<00:09,  1.85it/s]
+lkey loss:  tensor([0.04438], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04332], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04279], device='cuda:0', grad_fn=<MulBackward0>)
+
+     3/119     21.7G   0.06424   0.02971   0.04362       348      1280:  59%|█████▉    | 20/34 [00:14<00:09,  1.49it/s]
+lkey loss:  tensor([0.04391], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04347], device='cuda:0', grad_fn=<MulBackward0>)
+
+     3/119     21.7G   0.06376    0.0295   0.04358       394      1280:  71%|███████   | 24/34 [00:16<00:05,  1.91it/s]
+lkey loss:  tensor([0.04338], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04469], device='cuda:0', grad_fn=<MulBackward0>)
+
+     3/119     21.7G   0.06338   0.02951   0.04362       400      1280:  76%|███████▋  | 26/34 [00:18<00:06,  1.30it/s]
+lkey loss:  tensor([0.04214], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04383], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04480], device='cuda:0', grad_fn=<MulBackward0>)
+
+     3/119     21.7G   0.06325   0.02921   0.04357       341      1280:  88%|████████▊ | 30/34 [00:20<00:02,  1.82it/s]
+
+     3/119     21.7G   0.06312     0.029   0.04359       357      1280:  94%|█████████▍| 32/34 [00:21<00:01,  1.94it/s]
+lkey loss:  tensor([0.04460], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04334], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04190], device='cuda:0')
+lkey loss:  tensor([0.04283], device='cuda:0')
+lkey loss:  tensor([0.04235], device='cuda:0')
+     3/119     21.7G   0.06292   0.02909   0.04361       260      1280: 100%|██████████| 34/34 [00:24<00:00,  1.41it/s]
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 4/4 [00:00<00:00,  5.37it/s]
+                 all        236        580     0.0013      0.159   0.000817   0.000209
+lkey loss:  tensor([0.04369], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04458], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04327], device='cuda:0', grad_fn=<MulBackward0>)
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+     4/119     21.7G    0.0564   0.02535   0.04385       377      1280:   9%|▉         | 3/34 [00:01<00:14,  2.07it/s]
+lkey loss:  tensor([0.04446], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04262], device='cuda:0', grad_fn=<MulBackward0>)
+
+     4/119     21.7G   0.05814   0.02581   0.04351       358      1280:  18%|█▊        | 6/34 [00:02<00:13,  2.06it/s]
+lkey loss:  tensor([0.04326], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04350], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04466], device='cuda:0', grad_fn=<MulBackward0>)
+
+     4/119     21.7G   0.05846   0.02644   0.04354       384      1280:  29%|██▉       | 10/34 [00:05<00:13,  1.81it/s]
+lkey loss:  tensor([0.04365], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04387], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04358], device='cuda:0', grad_fn=<MulBackward0>)
+
+     4/119     21.7G   0.05819    0.0263   0.04358       359      1280:  41%|████      | 14/34 [00:07<00:09,  2.01it/s]
+lkey loss:  tensor([0.04338], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04392], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04330], device='cuda:0', grad_fn=<MulBackward0>)
+
+     4/119     21.7G   0.05798   0.02621   0.04357       317      1280:  50%|█████     | 17/34 [00:11<00:14,  1.20it/s]
+lkey loss:  tensor([0.04419], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04326], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04449], device='cuda:0', grad_fn=<MulBackward0>)
+
+     4/119     21.7G   0.05814   0.02622   0.04365       427      1280:  65%|██████▍   | 22/34 [00:13<00:06,  1.85it/s]
+lkey loss:  tensor([0.04265], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04355], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04340], device='cuda:0', grad_fn=<MulBackward0>)
+
+     4/119     21.7G     0.058   0.02587    0.0436       370      1280:  74%|███████▎  | 25/34 [00:17<00:07,  1.21it/s]
+lkey loss:  tensor([0.04373], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04310], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04322], device='cuda:0', grad_fn=<MulBackward0>)
+
+     4/119     21.7G   0.05787   0.02582   0.04359       371      1280:  82%|████████▏ | 28/34 [00:18<00:03,  1.65it/s]
+lkey loss:  tensor([0.04220], device='cuda:0', grad_fn=<MulBackward0>)
+
+     4/119     21.7G   0.05779   0.02579   0.04355       351      1280:  91%|█████████ | 31/34 [00:21<00:02,  1.26it/s]
+lkey loss:  tensor([0.04380], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04393], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04190], device='cuda:0')
+lkey loss:  tensor([0.04283], device='cuda:0')
+lkey loss:  tensor([0.04235], device='cuda:0')
+     4/119     21.7G   0.05773   0.02566   0.04355       229      1280: 100%|██████████| 34/34 [00:22<00:00,  1.52it/s]
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 4/4 [00:00<00:00,  5.69it/s]
+                 all        236        580     0.0025      0.305    0.00171   0.000486
+lkey loss:  tensor([0.04284], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04390], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04401], device='cuda:0', grad_fn=<MulBackward0>)
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+     5/119     21.7G   0.05611   0.02392   0.04358       380      1280:   9%|▉         | 3/34 [00:01<00:15,  1.97it/s]
+lkey loss:  tensor([0.04404], device='cuda:0', grad_fn=<MulBackward0>)
+
+     5/119     21.7G   0.05699    0.0239    0.0436       387      1280:  15%|█▍        | 5/34 [00:03<00:25,  1.14it/s]
+lkey loss:  tensor([0.04344], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04336], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04325], device='cuda:0', grad_fn=<MulBackward0>)
+
+     5/119     21.7G   0.05583   0.02491   0.04338       396      1280:  26%|██▋       | 9/34 [00:05<00:14,  1.75it/s]
+lkey loss:  tensor([0.04388], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04351], device='cuda:0', grad_fn=<MulBackward0>)
+
+     5/119     21.7G   0.05602   0.02492   0.04345       388      1280:  35%|███▌      | 12/34 [00:06<00:11,  1.94it/s]
+lkey loss:  tensor([0.04303], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04385], device='cuda:0', grad_fn=<MulBackward0>)
+
+     5/119     21.7G   0.05601    0.0248   0.04345       315      1280:  41%|████      | 14/34 [00:09<00:15,  1.29it/s]
+lkey loss:  tensor([0.04231], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04229], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04409], device='cuda:0', grad_fn=<MulBackward0>)
+
+     5/119     21.7G   0.05535   0.02437   0.04337       398      1280:  56%|█████▌    | 19/34 [00:11<00:07,  1.88it/s]
+
+     5/119     21.7G   0.05535   0.02427   0.04335       336      1280:  59%|█████▉    | 20/34 [00:12<00:07,  1.92it/s]
+lkey loss:  tensor([0.04390], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04609], device='cuda:0', grad_fn=<MulBackward0>)
+
+     5/119     21.7G   0.05519   0.02455   0.04347       401      1280:  68%|██████▊   | 23/34 [00:15<00:08,  1.30it/s]
+lkey loss:  tensor([0.04323], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04336], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04295], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04313], device='cuda:0', grad_fn=<MulBackward0>)
+
+     5/119     21.7G   0.05488   0.02412   0.04342       358      1280:  79%|███████▉  | 27/34 [00:17<00:03,  1.81it/s]
+lkey loss:  tensor([0.04282], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04431], device='cuda:0', grad_fn=<MulBackward0>)
+
+     5/119     21.7G   0.05475   0.02405   0.04345       394      1280:  88%|████████▊ | 30/34 [00:19<00:02,  1.47it/s]
+lkey loss:  tensor([0.04428], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04277], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04431], device='cuda:0', grad_fn=<MulBackward0>)
+     5/119     21.7G   0.05488   0.02396   0.04351       254      1280: 100%|██████████| 34/34 [00:21<00:00,  1.59it/s]
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:  25%|██▌       | 1/4 [00:00<00:00,  5.84it/s]
+lkey loss:  tensor([0.04283], device='cuda:0')
+lkey loss:  tensor([0.04235], device='cuda:0')
+lkey loss:  tensor([0.04191], device='cuda:0')
+lkey loss:  tensor([0.04309], device='cuda:0', grad_fn=<MulBackward0>)
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 4/4 [00:00<00:00,  5.94it/s]
+                 all        236        580    0.00374      0.455    0.00277   0.000781
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+     6/119     21.7G   0.05129   0.02246   0.04439       377      1280:   6%|▌         | 2/34 [00:01<00:16,  1.91it/s]
+lkey loss:  tensor([0.04462], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04362], device='cuda:0', grad_fn=<MulBackward0>)
+
+     6/119     21.7G    0.0519   0.02156   0.04435       346      1280:  15%|█▍        | 5/34 [00:02<00:16,  1.75it/s]
+lkey loss:  tensor([0.04398], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04330], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04280], device='cuda:0', grad_fn=<MulBackward0>)
+
+     6/119     21.7G   0.05266   0.02091   0.04388       284      1280:  26%|██▋       | 9/34 [00:04<00:12,  2.00it/s]
+
+     6/119     21.7G   0.05272   0.02101   0.04385       362      1280:  29%|██▉       | 10/34 [00:05<00:11,  2.03it/s]
+lkey loss:  tensor([0.04292], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04376], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04318], device='cuda:0', grad_fn=<MulBackward0>)
+
+     6/119     21.7G   0.05295   0.02133   0.04372       360      1280:  38%|███▊      | 13/34 [00:08<00:16,  1.31it/s]
+lkey loss:  tensor([0.04372], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04350], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04461], device='cuda:0', grad_fn=<MulBackward0>)
+
+     6/119     21.7G    0.0529   0.02178   0.04383       368      1280:  53%|█████▎    | 18/34 [00:11<00:08,  1.90it/s]
+lkey loss:  tensor([0.04349], device='cuda:0', grad_fn=<MulBackward0>)
+
+     6/119     21.7G   0.05324   0.02158   0.04381       311      1280:  56%|█████▌    | 19/34 [00:12<00:13,  1.14it/s]
+lkey loss:  tensor([0.04275], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04503], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04601], device='cuda:0', grad_fn=<MulBackward0>)
+
+     6/119     21.7G   0.05311   0.02175    0.0439       380      1280:  68%|██████▊   | 23/34 [00:14<00:06,  1.73it/s]
+lkey loss:  tensor([0.04239], device='cuda:0', grad_fn=<MulBackward0>)
+
+     6/119     21.7G    0.0529   0.02184   0.04386       384      1280:  76%|███████▋  | 26/34 [00:16<00:04,  1.92it/s]
+lkey loss:  tensor([0.04368], device='cuda:0', grad_fn=<MulBackward0>)
+
+     6/119     21.7G   0.05296   0.02172   0.04386       314      1280:  79%|███████▉  | 27/34 [00:18<00:07,  1.14s/it]
+lkey loss:  tensor([0.04372], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04289], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04376], device='cuda:0', grad_fn=<MulBackward0>)
+
+     6/119     21.7G   0.05295   0.02175   0.04387       309      1280:  94%|█████████▍| 32/34 [00:21<00:01,  1.69it/s]
+lkey loss:  tensor([0.04341], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04279], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04190], device='cuda:0')
+lkey loss:  tensor([0.04283], device='cuda:0')
+lkey loss:  tensor([0.04235], device='cuda:0')
+     6/119     21.7G   0.05283   0.02169   0.04383       226      1280: 100%|██████████| 34/34 [00:21<00:00,  1.55it/s]
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 4/4 [00:00<00:00,  5.73it/s]
+                 all        236        580    0.00569      0.657    0.00487    0.00142
+lkey loss:  tensor([0.04691], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04324], device='cuda:0', grad_fn=<MulBackward0>)
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+     7/119     21.7G    0.0482   0.01866   0.04508       314      1280:   6%|▌         | 2/34 [00:01<00:27,  1.17it/s]
+lkey loss:  tensor([0.04430], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04335], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04272], device='cuda:0', grad_fn=<MulBackward0>)
+
+     7/119     21.7G   0.05072   0.02089   0.04402       381      1280:  18%|█▊        | 6/34 [00:03<00:15,  1.86it/s]
+lkey loss:  tensor([0.04250], device='cuda:0', grad_fn=<MulBackward0>)
+
+     7/119     21.7G   0.05059   0.02178   0.04379       376      1280:  24%|██▎       | 8/34 [00:04<00:13,  1.97it/s]
+
+     7/119     21.7G   0.05095   0.02191   0.04371       398      1280:  26%|██▋       | 9/34 [00:07<00:31,  1.25s/it]
+lkey loss:  tensor([0.04300], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04260], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04275], device='cuda:0', grad_fn=<MulBackward0>)
+
+     7/119     21.7G   0.05151   0.02112   0.04352       295      1280:  38%|███▊      | 13/34 [00:09<00:13,  1.51it/s]
+lkey loss:  tensor([0.04400], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04396], device='cuda:0', grad_fn=<MulBackward0>)
+
+     7/119     21.7G   0.05076   0.02113   0.04355       374      1280:  47%|████▋     | 16/34 [00:11<00:09,  1.84it/s]
+lkey loss:  tensor([0.04291], device='cuda:0', grad_fn=<MulBackward0>)
+
+     7/119     21.7G   0.05052   0.02109   0.04349       377      1280:  53%|█████▎    | 18/34 [00:13<00:13,  1.19it/s]
+lkey loss:  tensor([0.04535], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04309], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04335], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04459], device='cuda:0', grad_fn=<MulBackward0>)
+
+     7/119     21.7G   0.05058   0.02097    0.0436       366      1280:  65%|██████▍   | 22/34 [00:15<00:06,  1.75it/s]
+lkey loss:  tensor([0.04343], device='cuda:0', grad_fn=<MulBackward0>)
+
+     7/119     21.7G   0.05044   0.02102   0.04359       350      1280:  74%|███████▎  | 25/34 [00:17<00:06,  1.34it/s]
+lkey loss:  tensor([0.04280], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04335], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04283], device='cuda:0', grad_fn=<MulBackward0>)
+
+     7/119     21.7G   0.05053   0.02098   0.04351       361      1280:  85%|████████▌ | 29/34 [00:19<00:02,  1.82it/s]
+lkey loss:  tensor([0.04271], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04343], device='cuda:0', grad_fn=<MulBackward0>)
+
+     7/119     21.7G   0.05085   0.02095   0.04347       341      1280:  94%|█████████▍| 32/34 [00:21<00:01,  1.96it/s]
+lkey loss:  tensor([0.04391], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04337], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04190], device='cuda:0')
+     7/119     21.7G   0.05095   0.02091   0.04348       197      1280: 100%|██████████| 34/34 [00:23<00:00,  1.45it/s]
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:  50%|█████     | 2/4 [00:00<00:00,  6.05it/s]
+lkey loss:  tensor([0.04235], device='cuda:0')
+lkey loss:  tensor([0.04191], device='cuda:0')
+lkey loss:  tensor([0.04439], device='cuda:0', grad_fn=<MulBackward0>)
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 4/4 [00:00<00:00,  6.38it/s]
+                 all        236        580    0.00728      0.779    0.00703    0.00203
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+     8/119     21.7G    0.0474   0.01993   0.04363       366      1280:   6%|▌         | 2/34 [00:00<00:15,  2.05it/s]
+lkey loss:  tensor([0.04376], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04423], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04353], device='cuda:0', grad_fn=<MulBackward0>)
+
+     8/119     21.7G   0.04974   0.02078   0.04362       364      1280:  18%|█▊        | 6/34 [00:02<00:13,  2.06it/s]
+lkey loss:  tensor([0.04315], device='cuda:0', grad_fn=<MulBackward0>)
+
+     8/119     21.7G   0.05014   0.02029   0.04356       329      1280:  21%|██        | 7/34 [00:04<00:25,  1.05it/s]
+lkey loss:  tensor([0.04326], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04286], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04427], device='cuda:0', grad_fn=<MulBackward0>)
+
+     8/119     21.7G   0.05055   0.02033   0.04366       345      1280:  35%|███▌      | 12/34 [00:07<00:12,  1.80it/s]
+lkey loss:  tensor([0.04482], device='cuda:0', grad_fn=<MulBackward0>)
+
+     8/119     21.7G   0.05032   0.02065   0.04374       406      1280:  41%|████      | 14/34 [00:08<00:10,  1.93it/s]
+lkey loss:  tensor([0.04337], device='cuda:0', grad_fn=<MulBackward0>)
+
+     8/119     21.7G   0.05005    0.0205   0.04371       344      1280:  44%|████▍     | 15/34 [00:10<00:21,  1.15s/it]
+lkey loss:  tensor([0.04428], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04443], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04407], device='cuda:0', grad_fn=<MulBackward0>)
+
+     8/119     21.7G    0.0495   0.02034   0.04379       356      1280:  59%|█████▉    | 20/34 [00:13<00:08,  1.68it/s]
+lkey loss:  tensor([0.04328], device='cuda:0', grad_fn=<MulBackward0>)
+
+     8/119     21.7G    0.0494   0.02044   0.04381       392      1280:  65%|██████▍   | 22/34 [00:14<00:06,  1.86it/s]
+lkey loss:  tensor([0.04328], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04344], device='cuda:0', grad_fn=<MulBackward0>)
+
+     8/119     21.7G   0.04924   0.02031   0.04376       387      1280:  74%|███████▎  | 25/34 [00:16<00:06,  1.45it/s]
+lkey loss:  tensor([0.04337], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04338], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04462], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04520], device='cuda:0', grad_fn=<MulBackward0>)
+
+     8/119     21.7G   0.04882    0.0202   0.04381       329      1280:  85%|████████▌ | 29/34 [00:18<00:02,  1.86it/s]
+
+     8/119     21.7G   0.04883   0.02023   0.04375       380      1280:  91%|█████████ | 31/34 [00:21<00:02,  1.14it/s]
+lkey loss:  tensor([0.04338], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04332], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04412], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04190], device='cuda:0')
+lkey loss:  tensor([0.04283], device='cuda:0')
+lkey loss:  tensor([0.04235], device='cuda:0')
+     8/119     21.7G   0.04864   0.02038   0.04374       233      1280: 100%|██████████| 34/34 [00:22<00:00,  1.52it/s]
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 4/4 [00:00<00:00,  6.33it/s]
+                 all        236        580     0.0097      0.864    0.00999    0.00286
+lkey loss:  tensor([0.04203], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04393], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04425], device='cuda:0', grad_fn=<MulBackward0>)
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+     9/119     21.7G   0.05248   0.01991   0.04341       348      1280:   9%|▉         | 3/34 [00:01<00:15,  1.96it/s]
+
+     9/119     21.7G   0.05206   0.01944   0.04392       316      1280:  12%|█▏        | 4/34 [00:02<00:15,  1.97it/s]
+lkey loss:  tensor([0.04318], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04279], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04669], device='cuda:0', grad_fn=<MulBackward0>)
+
+     9/119     21.7G   0.05045   0.01966   0.04399       330      1280:  24%|██▎       | 8/34 [00:05<00:16,  1.56it/s]
+lkey loss:  tensor([0.04373], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04383], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04297], device='cuda:0', grad_fn=<MulBackward0>)
+
+     9/119     21.7G    0.0495   0.01987   0.04386       399      1280:  35%|███▌      | 12/34 [00:07<00:11,  1.92it/s]
+lkey loss:  tensor([0.04405], device='cuda:0', grad_fn=<MulBackward0>)
+
+     9/119     21.7G   0.04945   0.01964   0.04382       344      1280:  41%|████      | 14/34 [00:09<00:16,  1.24it/s]
+lkey loss:  tensor([0.04377], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04368], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04340], device='cuda:0', grad_fn=<MulBackward0>)
+
+     9/119     21.7G   0.04894   0.01939   0.04373       328      1280:  53%|█████▎    | 18/34 [00:11<00:08,  1.79it/s]
+lkey loss:  tensor([0.04398], device='cuda:0', grad_fn=<MulBackward0>)
+
+     9/119     21.7G   0.04859   0.01931   0.04379       337      1280:  59%|█████▉    | 20/34 [00:12<00:07,  1.92it/s]
+lkey loss:  tensor([0.04452], device='cuda:0', grad_fn=<MulBackward0>)
+
+     9/119     21.7G   0.04849   0.01912   0.04382       333      1280:  65%|██████▍   | 22/34 [00:15<00:10,  1.12it/s]
+lkey loss:  tensor([0.04280], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04284], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04435], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04403], device='cuda:0', grad_fn=<MulBackward0>)
+
+     9/119     21.7G   0.04818   0.01914   0.04377       359      1280:  76%|███████▋  | 26/34 [00:17<00:04,  1.72it/s]
+lkey loss:  tensor([0.04308], device='cuda:0', grad_fn=<MulBackward0>)
+
+     9/119     21.7G   0.04801   0.01922   0.04379       378      1280:  82%|████████▏ | 28/34 [00:18<00:03,  1.88it/s]
+lkey loss:  tensor([0.04343], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04451], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04299], device='cuda:0', grad_fn=<MulBackward0>)
+
+     9/119     21.7G   0.04775   0.01906   0.04385       334      1280:  97%|█████████▋| 33/34 [00:21<00:00,  1.78it/s]
+lkey loss:  tensor([0.04310], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04190], device='cuda:0')
+lkey loss:  tensor([0.04283], device='cuda:0')
+lkey loss:  tensor([0.04235], device='cuda:0')
+lkey loss:  tensor([0.04191], device='cuda:0')
+     9/119     21.7G   0.04771   0.01905   0.04383       222      1280: 100%|██████████| 34/34 [00:22<00:00,  1.54it/s]
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 4/4 [00:00<00:00,  5.83it/s]
+                 all        236        580     0.0134      0.945      0.015     0.0046
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+    10/119     21.7G   0.04294   0.02092   0.04378       387      1280:   3%|▎         | 1/34 [00:00<00:16,  2.01it/s]
+lkey loss:  tensor([0.04327], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04279], device='cuda:0', grad_fn=<MulBackward0>)
+
+    10/119     21.7G   0.04495   0.01846   0.04343       347      1280:  12%|█▏        | 4/34 [00:02<00:19,  1.55it/s]
+lkey loss:  tensor([0.04459], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04276], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04291], device='cuda:0', grad_fn=<MulBackward0>)
+
+    10/119     21.7G   0.04644   0.01868   0.04347       358      1280:  24%|██▎       | 8/34 [00:04<00:13,  1.94it/s]
+lkey loss:  tensor([0.04320], device='cuda:0', grad_fn=<MulBackward0>)
+
+    10/119     21.7G   0.04664   0.01845   0.04353       363      1280:  29%|██▉       | 10/34 [00:05<00:11,  2.00it/s]
+lkey loss:  tensor([0.04321], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04343], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04384], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04453], device='cuda:0', grad_fn=<MulBackward0>)
+
+    10/119     21.7G   0.04674   0.01879   0.04354       358      1280:  44%|████▍     | 15/34 [00:10<00:12,  1.47it/s]
+lkey loss:  tensor([0.04386], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04290], device='cuda:0', grad_fn=<MulBackward0>)
+
+    10/119     21.7G    0.0468    0.0187   0.04349       382      1280:  53%|█████▎    | 18/34 [00:11<00:08,  1.82it/s]
+lkey loss:  tensor([0.04293], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04323], device='cuda:0', grad_fn=<MulBackward0>)
+
+    10/119     21.7G   0.04647   0.01875   0.04345       404      1280:  59%|█████▉    | 20/34 [00:14<00:11,  1.27it/s]
+lkey loss:  tensor([0.04288], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04342], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04386], device='cuda:0', grad_fn=<MulBackward0>)
+
+    10/119     21.7G   0.04622   0.01862   0.04344       370      1280:  71%|███████   | 24/34 [00:16<00:05,  1.79it/s]
+lkey loss:  tensor([0.04462], device='cuda:0', grad_fn=<MulBackward0>)
+
+    10/119     21.7G   0.04599   0.01857    0.0436       363      1280:  79%|███████▉  | 27/34 [00:18<00:05,  1.35it/s]
+lkey loss:  tensor([0.04350], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04320], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04289], device='cuda:0', grad_fn=<MulBackward0>)
+
+    10/119     21.7G   0.04575    0.0185   0.04353       382      1280:  91%|█████████ | 31/34 [00:20<00:01,  1.82it/s]
+lkey loss:  tensor([0.04525], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04477], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04331], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04190], device='cuda:0')
+lkey loss:  tensor([0.04283], device='cuda:0')
+lkey loss:  tensor([0.04235], device='cuda:0')
+    10/119     21.7G   0.04589   0.01845   0.04361       207      1280: 100%|██████████| 34/34 [00:21<00:00,  1.57it/s]
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 4/4 [00:00<00:00,  6.42it/s]
+                 all        236        580     0.0174      0.952     0.0199    0.00559
+lkey loss:  tensor([0.04275], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04346], device='cuda:0', grad_fn=<MulBackward0>)
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+    11/119     21.7G   0.04213   0.01855    0.0431       393      1280:   6%|▌         | 2/34 [00:01<00:19,  1.64it/s]
+lkey loss:  tensor([0.04304], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04464], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04297], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04290], device='cuda:0', grad_fn=<MulBackward0>)
+    11/119     21.7G   0.04531   0.01873   0.04329       344      1280:  18%|█▊        | 6/34 [00:03<00:14,  1.97it/s]
+    11/119     21.7G   0.04531   0.01873   0.04329       344      1280:  18%|█▊        | 6/34 [00:03<00:14,  1.97it/s]
+    11/119     21.7G   0.04537   0.01851   0.04337       326      1280:  24%|██▎       | 8/34 [00:04<00:12,  2.01it/s]
+    11/119     21.7G   0.04537   0.01851   0.04337       326      1280:  24%|██▎       | 8/34 [00:04<00:12,  2.01it/s]
+lkey loss:  tensor([0.04420], device='cuda:0', grad_fn=<MulBackward0>)
+    11/119     21.7G   0.04613   0.01852   0.04351       359      1280:  29%|██▉       | 10/34 [00:07<00:23,  1.04it/s]
+    11/119     21.7G   0.04613   0.01852   0.04351       359      1280:  29%|██▉       | 10/34 [00:07<00:23,  1.04it/s]
+lkey loss:  tensor([0.04392], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04343], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04397], device='cuda:0', grad_fn=<MulBackward0>)
+    11/119     21.7G   0.04546   0.01843   0.04354       351      1280:  41%|████      | 14/34 [00:09<00:11,  1.68it/s]
+    11/119     21.7G   0.04546   0.01843   0.04354       351      1280:  41%|████      | 14/34 [00:09<00:11,  1.68it/s]
+lkey loss:  tensor([0.04448], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04440], device='cuda:0', grad_fn=<MulBackward0>)
+    11/119     21.7G   0.04503   0.01811   0.04368       287      1280:  50%|█████     | 17/34 [00:11<00:12,  1.40it/s]
+    11/119     21.7G   0.04503   0.01811   0.04368       287      1280:  50%|█████     | 17/34 [00:11<00:12,  1.40it/s]
+lkey loss:  tensor([0.04358], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04343], device='cuda:0', grad_fn=<MulBackward0>)
+    11/119     21.7G   0.04492   0.01829   0.04367       441      1280:  62%|██████▏   | 21/34 [00:13<00:07,  1.66it/s]
+    11/119     21.7G   0.04492   0.01829   0.04367       441      1280:  62%|██████▏   | 21/34 [00:13<00:07,  1.66it/s]
+lkey loss:  tensor([0.04335], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04468], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04366], device='cuda:0', grad_fn=<MulBackward0>)
+    11/119     21.7G   0.04461   0.01831   0.04368       419      1280:  71%|███████   | 24/34 [00:15<00:05,  1.91it/s]
+    11/119     21.7G   0.04461   0.01831   0.04368       419      1280:  71%|███████   | 24/34 [00:15<00:05,  1.91it/s]
+    11/119     21.7G   0.04465   0.01829   0.04367       360      1280:  74%|███████▎  | 25/34 [00:17<00:09,  1.04s/it]
+    11/119     21.7G   0.04465   0.01829   0.04367       360      1280:  74%|███████▎  | 25/34 [00:17<00:09,  1.04s/it]
+lkey loss:  tensor([0.04428], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04308], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04413], device='cuda:0', grad_fn=<MulBackward0>)
+    11/119     21.7G   0.04474   0.01827   0.04371       355      1280:  85%|████████▌ | 29/34 [00:19<00:03,  1.58it/s]
+    11/119     21.7G   0.04474   0.01827   0.04371       355      1280:  85%|████████▌ | 29/34 [00:19<00:03,  1.58it/s]
+lkey loss:  tensor([0.04278], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04359], device='cuda:0', grad_fn=<MulBackward0>)
+    11/119     21.7G   0.04466   0.01814   0.04367       335      1280:  94%|█████████▍| 32/34 [00:20<00:01,  1.87it/s]
+    11/119     21.7G   0.04466   0.01814   0.04367       335      1280:  94%|█████████▍| 32/34 [00:20<00:01,  1.87it/s]
+lkey loss:  tensor([0.04337], device='cuda:0', grad_fn=<MulBackward0>)
+    11/119     21.7G   0.04497   0.01827   0.04367       237      1280: 100%|██████████| 34/34 [00:23<00:00,  1.45it/s]
+    11/119     21.7G   0.04497   0.01827   0.04367       237      1280: 100%|██████████| 34/34 [00:23<00:00,  1.45it/s]
+lkey loss:  tensor([0.04190], device='cuda:0')
+lkey loss:  tensor([0.04283], device='cuda:0')
+lkey loss:  tensor([0.04235], device='cuda:0')
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0224    0.00711█| 34/34 [00:23<00:00,  1.45it/s]
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0224    0.00711█| 34/34 [00:23<00:00,  1.45it/s]
+lkey loss:  tensor([0.04427], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04385], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04390], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04423], device='cuda:0', grad_fn=<MulBackward0>)
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0224    0.00711█| 34/34 [00:23<00:00,  1.45it/s]
+lkey loss:  tensor([0.04347], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04292], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04381], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04483], device='cuda:0', grad_fn=<MulBackward0>)
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0224    0.00711█| 34/34 [00:23<00:00,  1.45it/s]
+lkey loss:  tensor([0.04395], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04350], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04326], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04350], device='cuda:0', grad_fn=<MulBackward0>)
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0224    0.00711█| 34/34 [00:23<00:00,  1.45it/s]
+lkey loss:  tensor([0.04426], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04535], device='cuda:0', grad_fn=<MulBackward0>)
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0224    0.00711█| 34/34 [00:23<00:00,  1.45it/s]
+lkey loss:  tensor([0.04298], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04449], device='cuda:0', grad_fn=<MulBackward0>)
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0224    0.00711█| 34/34 [00:23<00:00,  1.45it/s]
+lkey loss:  tensor([0.04362], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04305], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04310], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04448], device='cuda:0', grad_fn=<MulBackward0>)
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0224    0.00711█| 34/34 [00:23<00:00,  1.45it/s]
+lkey loss:  tensor([0.04414], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04418], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04349], device='cuda:0', grad_fn=<MulBackward0>)
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0224    0.00711█| 34/34 [00:23<00:00,  1.45it/s]
+lkey loss:  tensor([0.04459], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04295], device='cuda:0', grad_fn=<MulBackward0>)
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0224    0.00711█| 34/34 [00:23<00:00,  1.45it/s]
+lkey loss:  tensor([0.04305], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04370], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04278], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04399], device='cuda:0', grad_fn=<MulBackward0>)
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0224    0.00711█| 34/34 [00:23<00:00,  1.45it/s]
+lkey loss:  tensor([0.04530], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04324], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04389], device='cuda:0', grad_fn=<MulBackward0>)
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0224    0.00711█| 34/34 [00:23<00:00,  1.45it/s]
+lkey loss:  tensor([0.04383], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04220], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04190], device='cuda:0')
+lkey loss:  tensor([0.04283], device='cuda:0')
+lkey loss:  tensor([0.04235], device='cuda:0')
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 4/4 [00:00<00:00,  6.46it/s]
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 4/4 [00:00<00:00,  6.46it/s]
+lkey loss:  tensor([0.04508], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04341], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04341], device='cuda:0', grad_fn=<MulBackward0>)
+    13/119     21.7G   0.04023   0.01628   0.04397       352      1280:   9%|▉         | 3/34 [00:01<00:15,  1.95it/s]
+    13/119     21.7G   0.04023   0.01628   0.04397       352      1280:   9%|▉         | 3/34 [00:01<00:15,  1.95it/s]
+lkey loss:  tensor([0.04374], device='cuda:0', grad_fn=<MulBackward0>)
+    13/119     21.7G   0.04005   0.01611   0.04424       290      1280:  15%|█▍        | 5/34 [00:03<00:22,  1.29it/s]
+    13/119     21.7G   0.04005   0.01611   0.04424       290      1280:  15%|█▍        | 5/34 [00:03<00:22,  1.29it/s]
+lkey loss:  tensor([0.04406], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04369], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04254], device='cuda:0', grad_fn=<MulBackward0>)
+    13/119     21.7G   0.04068   0.01683   0.04386       346      1280:  29%|██▉       | 10/34 [00:05<00:12,  1.89it/s]
+    13/119     21.7G   0.04068   0.01683   0.04386       346      1280:  29%|██▉       | 10/34 [00:05<00:12,  1.89it/s]
+lkey loss:  tensor([0.04221], device='cuda:0', grad_fn=<MulBackward0>)
+    13/119     21.7G   0.04144   0.01687   0.04367       346      1280:  35%|███▌      | 12/34 [00:06<00:11,  1.97it/s]
+    13/119     21.7G   0.04144   0.01687   0.04367       346      1280:  35%|███▌      | 12/34 [00:06<00:11,  1.97it/s]
+lkey loss:  tensor([0.04489], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04428], device='cuda:0', grad_fn=<MulBackward0>)
+    13/119     21.7G   0.04149   0.01705    0.0438       401      1280:  41%|████      | 14/34 [00:09<00:15,  1.28it/s]
+    13/119     21.7G   0.04149   0.01705    0.0438       401      1280:  41%|████      | 14/34 [00:09<00:15,  1.28it/s]
+lkey loss:  tensor([0.04488], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04327], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04405], device='cuda:0', grad_fn=<MulBackward0>)
+    13/119     21.7G   0.04158    0.0169   0.04382       314      1280:  53%|█████▎    | 18/34 [00:11<00:09,  1.65it/s]
+    13/119     21.7G   0.04158    0.0169   0.04382       314      1280:  53%|█████▎    | 18/34 [00:11<00:09,  1.65it/s]
+lkey loss:  tensor([0.04280], device='cuda:0', grad_fn=<MulBackward0>)
+    13/119     21.7G   0.04143   0.01687   0.04374       375      1280:  62%|██████▏   | 21/34 [00:13<00:10,  1.28it/s]
+    13/119     21.7G   0.04143   0.01687   0.04374       375      1280:  62%|██████▏   | 21/34 [00:13<00:10,  1.28it/s]
+lkey loss:  tensor([0.04300], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04502], device='cuda:0', grad_fn=<MulBackward0>)
+    13/119     21.7G   0.04165   0.01687   0.04376       332      1280:  68%|██████▊   | 23/34 [00:15<00:09,  1.14it/s]
+    13/119     21.7G   0.04165   0.01687   0.04376       332      1280:  68%|██████▊   | 23/34 [00:15<00:09,  1.14it/s]
+lkey loss:  tensor([0.04487], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04504], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04382], device='cuda:0', grad_fn=<MulBackward0>)
+    13/119     21.7G   0.04243   0.01686   0.04384       390      1280:  79%|███████▉  | 27/34 [00:17<00:04,  1.70it/s]
+    13/119     21.7G   0.04243   0.01686   0.04384       390      1280:  79%|███████▉  | 27/34 [00:17<00:04,  1.70it/s]
+lkey loss:  tensor([0.04260], device='cuda:0', grad_fn=<MulBackward0>)
+    13/119     21.7G   0.04228   0.01697    0.0438       373      1280:  88%|████████▊ | 30/34 [00:19<00:02,  1.52it/s]
+    13/119     21.7G   0.04228   0.01697    0.0438       373      1280:  88%|████████▊ | 30/34 [00:19<00:02,  1.52it/s]
+lkey loss:  tensor([0.04344], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04306], device='cuda:0', grad_fn=<MulBackward0>)
+    13/119     21.7G   0.04226   0.01693   0.04378       362      1280:  97%|█████████▋| 33/34 [00:21<00:00,  1.57it/s]
+    13/119     21.7G   0.04226   0.01693   0.04378       362      1280:  97%|█████████▋| 33/34 [00:21<00:00,  1.57it/s]
+lkey loss:  tensor([0.04320], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04190], device='cuda:0')
+lkey loss:  tensor([0.04283], device='cuda:0')
+lkey loss:  tensor([0.04235], device='cuda:0')
+lkey loss:  tensor([0.04191], device='cuda:0')
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0369     0.0119█| 34/34 [00:22<00:00,  1.54it/s]
+     Epoch   gpu_mem       box       obj       cls    labels  img_size.0369     0.0119█| 34/34 [00:22<00:00,  1.54it/s]
+lkey loss:  tensor([0.04448], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04434], device='cuda:0', grad_fn=<MulBackward0>)
+lkey loss:  tensor([0.04340], device='cuda:0', grad_fn=<MulBackward0>)
+    gotit = waiter.acquire(True, timeout)imeout) batch -------------------------------------------------------------/s]
+    gotit = waiter.acquire(True, timeout)imeout) batch -------------------------------------------------------------/s]
+    gotit = waiter.acquire(True, timeout)imeout) batch -------------------------------------------------------------/s]
