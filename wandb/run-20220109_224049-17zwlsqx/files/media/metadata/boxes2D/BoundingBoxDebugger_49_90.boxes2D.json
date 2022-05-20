@@ -1,1 +1,0 @@
-{"box_data": [{"position": {"minX": 398.5, "minY": 128.75, "maxX": 428.5, "maxY": 172.75}, "class_id": 0, "box_caption": "Sorrel 0.001", "scores": {"class_score": 0.0012111663818359375}, "domain": "pixel"}], "class_labels": {"0": "Sorrel"}}
